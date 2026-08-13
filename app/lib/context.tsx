@@ -1,7 +1,7 @@
 // lib/i18n/context.tsx
 'use client';
 
-import { createContext, useContext, useState, useSyncExternalStore, ReactNode, useCallback } from 'react';
+import { createContext, useContext, useSyncExternalStore, ReactNode, useCallback } from 'react';
 import { translations, Language } from './translations';
 
 type I18nContextType = {

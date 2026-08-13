@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Link from 'next/link';
 import { useTranslation } from './lib/context';
 
@@ -30,16 +30,18 @@ export default function Home() {
 
       <div className="md:col-span-8 space-y-16">
 
-        <section id="experiencia" className="scroll-mt-8">
+        <section id="experience" className="scroll-mt-8">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-200 dark:border-gray-800 pb-2">
-            Experiencia
+            {t.experience.title}
           </h2>
           <div className="space-y-6">
             <div>
               <h3 className="font-medium text-gray-900 dark:text-gray-100">
-                Desarrollador Backend Senior
+                {t.experience.job1.role}
               </h3>
-              <p className="text-sm text-gray-900 dark:text-gray-100">Empresa XYZ · 2022 - Presente</p>
+              <p className="text-sm text-gray-900 dark:text-gray-100">
+                {t.experience.job1.company}
+              </p>
               <p className="mt-2 text-gray-900 dark:text-gray-300">
                 Diseño e implementación de APIs RESTful con Python y PostgreSQL.
                 Reduje el tiempo de respuesta de las consultas críticas en un 40%.
@@ -49,19 +51,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="proyectos" className="scroll-mt-8">
+        <section id="projects" className="scroll-mt-8">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-200 dark:border-gray-800 pb-2">
-            Proyectos
+            {t.projects.title}
           </h2>
           <div className="space-y-6">
             <div>
               <h3 className="font-medium">
-                <a href="#" className="hover:underline">Sistema de Inventario v2</a>
+                <a href="#" className="hover:underline">
+                  {t.projects.project1.name}
+                </a>
               </h3>
-              <p className="text-sm text-gray-900 dark:text-gray-100 mb-2">Node.js · Express · MongoDB</p>
+              <p className="text-sm text-gray-900 dark:text-gray-100 mb-2">
+                {t.projects.project1.tech}
+              </p>
               <p className="text-gray-900 dark:text-gray-300">
-                Aplicación interna para gestionar stock en tiempo real.
-                Maneja sincronización de datos entre 3 sucursales.
+                {t.projects.project1.description}
               </p>
             </div>
             {/* Más proyectos... */}
@@ -70,7 +75,7 @@ export default function Home() {
 
         <section id="stack" className="scroll-mt-8">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-200 dark:border-gray-800 pb-2">
-            Stack Tecnológico
+            {t.stack.title}
           </h2>
           <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
             <li className="p-3 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800">Python / Django</li>
@@ -84,10 +89,10 @@ export default function Home() {
 
         <section id="contacto" className="scroll-mt-8 pb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-200 dark:border-gray-800 pb-2">
-            Contacto
+            {t.contact.title}
           </h2>
           <p className="text-gray-900 dark:text-gray-300 mb-4">
-            Estoy abierto a oportunidades en desarrollo backend y arquitectura de software.
+            {t.contact.intro}
           </p>
           <div className="space-y-2 text-sm">
             <p>📧 <a href="mailto:tu@email.com" className="hover:underline">tu@email.com</a></p>

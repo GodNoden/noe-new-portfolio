@@ -22,7 +22,7 @@ export default function ThemeToggle() {
     // Mientras no esté montado, renderiza un placeholder del mismo tamaño
     // para evitar layout shift (salto visual)
     if (!mounted) {
-        return <div className="h-6 w-13" />;
+        return <div className="h-5 w-13" />;
     }
 
     return (
