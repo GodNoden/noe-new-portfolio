@@ -1,69 +1,102 @@
-import Image from "next/image";
+'use client'
+import Link from 'next/link';
+import { useTranslation } from './lib/context';
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    // <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    //   <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+
+    //   </main>
+    // </div>
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+
+      <aside className="md:col-span-4 md:sticky md:top-8 h-fit space-y-6">
+        <div>
+          <h1 className="text-3xl font-bold">{t.name}</h1>
+          <p className="text-gray-600 dark:text-gray-400 mt-2">
+            {t.title}<br />{t.subtitle}
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+        <nav className="flex flex-col space-y-3">
+          <Link href="#experience">{t.nav.experience}</Link>
+          <Link href="#projects">{t.nav.projects}</Link>
+          <Link href="#stack">{t.nav.stack}</Link>
+          <Link href="#contact">{t.nav.contact}</Link>
+        </nav>
+      </aside>
+
+      <div className="md:col-span-8 space-y-16">
+
+        <section id="experiencia" className="scroll-mt-8">
+          <h2 className="text-xl font-semibold mb-4 border-b border-gray-200 dark:border-gray-800 pb-2">
+            Experiencia
+          </h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-medium text-gray-900 dark:text-gray-100">
+                Desarrollador Backend Senior
+              </h3>
+              <p className="text-sm text-gray-900 dark:text-gray-100">Empresa XYZ · 2022 - Presente</p>
+              <p className="mt-2 text-gray-900 dark:text-gray-300">
+                Diseño e implementación de APIs RESTful con Python y PostgreSQL.
+                Reduje el tiempo de respuesta de las consultas críticas en un 40%.
+              </p>
+            </div>
+            {/* Más experiencias... */}
+          </div>
+        </section>
+
+        <section id="proyectos" className="scroll-mt-8">
+          <h2 className="text-xl font-semibold mb-4 border-b border-gray-200 dark:border-gray-800 pb-2">
+            Proyectos
+          </h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-medium">
+                <a href="#" className="hover:underline">Sistema de Inventario v2</a>
+              </h3>
+              <p className="text-sm text-gray-900 dark:text-gray-100 mb-2">Node.js · Express · MongoDB</p>
+              <p className="text-gray-900 dark:text-gray-300">
+                Aplicación interna para gestionar stock en tiempo real.
+                Maneja sincronización de datos entre 3 sucursales.
+              </p>
+            </div>
+            {/* Más proyectos... */}
+          </div>
+        </section>
+
+        <section id="stack" className="scroll-mt-8">
+          <h2 className="text-xl font-semibold mb-4 border-b border-gray-200 dark:border-gray-800 pb-2">
+            Stack Tecnológico
+          </h2>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
+            <li className="p-3 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800">Python / Django</li>
+            <li className="p-3 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800">PostgreSQL</li>
+            <li className="p-3 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800">Docker</li>
+            <li className="p-3 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800">AWS (EC2, S3)</li>
+            <li className="p-3 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800">Git / CI/CD</li>
+            <li className="p-3 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800">Linux</li>
+          </ul>
+        </section>
+
+        <section id="contacto" className="scroll-mt-8 pb-12">
+          <h2 className="text-xl font-semibold mb-4 border-b border-gray-200 dark:border-gray-800 pb-2">
+            Contacto
+          </h2>
+          <p className="text-gray-900 dark:text-gray-300 mb-4">
+            Estoy abierto a oportunidades en desarrollo backend y arquitectura de software.
+          </p>
+          <div className="space-y-2 text-sm">
+            <p>📧 <a href="mailto:tu@email.com" className="hover:underline">tu@email.com</a></p>
+            <p>💼 <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer" className="hover:underline">linkedin.com/in/tuusuario</a></p>
+            <p>💻 <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer" className="hover:underline">github.com/tuusuario</a></p>
+          </div>
+        </section>
+
+      </div>
     </div>
   );
 }
