@@ -30,6 +30,12 @@ export const translations = {
             title: "Contact",
             intro: "I'm open to backend development and software architecture opportunities.",
         },
+        roadmap: {
+            title: 'Roadmap',
+            nav: 'Roadmap',
+            projects: 'Upcoming projects',
+            certifications: 'Target certifications',
+        },
     },
     es: {
         name: "Noe Ixmak Quezada Torres",
@@ -62,6 +68,12 @@ export const translations = {
             title: "Contacto",
             intro: "Estoy abierto a oportunidades en desarrollo backend y arquitectura de software.",
         },
+        roadmap: {
+            title: 'Roadmap',
+            nav: 'Roadmap',
+            projects: 'Proyectos futuros',
+            certifications: 'Certificaciones en mira',
+        },
     },
     fr: {
         name: "Noe Ixmak Quezada Torres",
@@ -93,6 +105,12 @@ export const translations = {
         contact: {
             title: "Contact",
             intro: "Je suis ouvert aux opportunités en développement backend et architecture logicielle.",
+        },
+        roadmap: {
+            title: 'Roadmap',
+            nav: 'Roadmap',
+            projects: 'Projets à venir',
+            certifications: 'Certifications visées',
         },
     },
 } as const;

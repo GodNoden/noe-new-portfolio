@@ -1,16 +1,13 @@
 'use client';
 import Link from 'next/link';
 import { useTranslation } from './lib/context';
+import RoadmapItemCard from './components/RoadmapItem';
+import { futureProjects, targetCertifications } from './lib/roadmap';
 
 export default function Home() {
   const { t } = useTranslation();
 
   return (
-    // <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-    //   <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-
-    //   </main>
-    // </div>
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
 
       <aside className="md:col-span-4 md:sticky md:top-8 h-fit space-y-6">
@@ -25,6 +22,7 @@ export default function Home() {
           <Link href="#projects">{t.nav.projects}</Link>
           <Link href="#stack">{t.nav.stack}</Link>
           <Link href="#contact">{t.nav.contact}</Link>
+          <Link href="#roadmap">{t.roadmap.nav}</Link>
         </nav>
       </aside>
 
@@ -98,6 +96,38 @@ export default function Home() {
             <p>📧 <a href="mailto:tu@email.com" className="hover:underline">tu@email.com</a></p>
             <p>💼 <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer" className="hover:underline">linkedin.com/in/tuusuario</a></p>
             <p>💻 <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer" className="hover:underline">github.com/tuusuario</a></p>
+          </div>
+        </section>
+
+        <section id="roadmap" className="scroll-mt-8">
+          <h2 className="text-xl font-semibold mb-6 border-b border-gray-200 dark:border-gray-800 pb-2">
+            {t.roadmap.title}
+          </h2>
+
+          <div className="space-y-8">
+            {/* Proyectos futuros */}
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-4">
+                {t.roadmap.projects}
+              </h3>
+              <div className="space-y-0">
+                {futureProjects.map((item) => (
+                  <RoadmapItemCard key={item.title} item={item} />
+                ))}
+              </div>
+            </div>
+
+            {/* Certificaciones */}
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-4">
+                {t.roadmap.certifications}
+              </h3>
+              <div className="space-y-0">
+                {targetCertifications.map((item) => (
+                  <RoadmapItemCard key={item.title} item={item} />
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
