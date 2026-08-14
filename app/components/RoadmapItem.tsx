@@ -19,9 +19,15 @@ export default function RoadmapItemCard({ item }: { item: RoadmapItemType; }) {
     const status = statusConfig[item.status];
 
     return (
-        <div className="relative pl-6 pb-8 border-l-2 border-gray-200 dark:border-gray-700 last:pb-0">
-            {/* Punto del timeline */}
-            <span className="absolute -left-1.75 top-1 w-3 h-3 rounded-full bg-gray-900 dark:bg-gray-100" />
+        <div className="group relative pl-6 pb-8 last:pb-0">
+            {/* Línea PRIMERO: queda debajo en el orden de pintado */}
+            <span
+                className="absolute left-[5px] top-[10px] -bottom-1 w-0.5 bg-gray-200 dark:bg-gray-700 group-last:hidden"
+                aria-hidden="true"
+            />
+
+            {/* Punto DESPUÉS con z-10: se dibuja encima de la línea */}
+            <span className="absolute left-0 top-1 w-3 h-3 rounded-full bg-gray-900 dark:bg-gray-100 z-10" />
 
             <div className="flex flex-wrap items-center gap-2 mb-1">
                 <h3 className="font-medium text-gray-900 dark:text-gray-100">
