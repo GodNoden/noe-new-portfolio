@@ -1,4 +1,3 @@
-// lib/roadmap.ts
 export type RoadmapStatus = 'completed' | 'in-progress' | 'planned';
 
 export type RoadmapItem = {

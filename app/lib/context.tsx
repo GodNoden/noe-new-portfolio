@@ -1,4 +1,3 @@
-// lib/i18n/context.tsx
 'use client';
 
 import { createContext, useContext, useSyncExternalStore, ReactNode, useCallback } from 'react';
@@ -12,7 +11,6 @@ type I18nContextType = {
 
 const I18nContext = createContext<I18nContextType | null>(null);
 
-// Store que sincroniza con localStorage
 const languageStore = {
     subscribe: (callback: () => void) => {
         window.addEventListener('storage', callback);
@@ -38,7 +36,6 @@ export function LanguageProvider({ children }: { children: ReactNode; }) {
 
     const setLanguage = useCallback((lang: Language) => {
         localStorage.setItem('language', lang);
-        // Forzar re-suscripción emitiendo un evento storage
         window.dispatchEvent(new Event('storage'));
     }, []);
 

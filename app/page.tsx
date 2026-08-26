@@ -33,19 +33,22 @@ export default function Home() {
             {t.experience.title}
           </h2>
           <div className="space-y-6">
-            <div>
-              <h3 className="font-medium text-gray-900 dark:text-gray-100">
-                {t.experience.job1.role}
-              </h3>
-              <p className="text-sm text-gray-900 dark:text-gray-100">
-                {t.experience.job1.company}
-              </p>
-              <p className="mt-2 text-gray-900 dark:text-gray-300">
-                Diseño e implementación de APIs RESTful con Python y PostgreSQL.
-                Reduje el tiempo de respuesta de las consultas críticas en un 40%.
-              </p>
-            </div>
-            {/* Más experiencias... */}
+            {t.experience.jobs.map((job) => (
+              <div key={job.role}>
+                <h3 className="font-medium text-gray-900 dark:text-gray-100">
+                  {job.role}
+                </h3>
+                <p className="text-sm text-gray-900 dark:text-gray-100">
+                  <a href={job.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    {job.company}
+                  </a>
+                  {job.dates && <span className="ml-2 text-gray-500 dark:text-gray-400">{job.dates}</span>}
+                </p>
+                <p className="mt-2 whitespace-pre-line text-gray-900 dark:text-gray-300">
+                  {job.description}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
