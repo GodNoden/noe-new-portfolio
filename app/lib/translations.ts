@@ -53,13 +53,28 @@ export const translations = {
         },
         projects: {
             title: "Projects",
-            project1: {
-                name: "Inventory System v2",
-                tech: "Node.js · Express · MongoDB",
-                description:
-                    "Internal application for managing real-time stock. Handles data synchronization between 3 branches.",
-            },
+            project: [
+                {
+                    name: "My Portfolio",
+                    tech: "NextJS · TypeScript · TailwindCSS · AWS Amplify",
+                    description:
+                        "A personal portfolio website showcasing my experience, projects, and skills. Built with NextJS and TypeScript, styled with TailwindCSS, and deployed on AWS Amplify.",
+                },
+                {
+                    name: "ComerBien (Recipe and Nutritional Tracking App)",
+                    tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
+                    description:
+                        "A web application that allows users to track their meals, recipes, and nutritional intake. Built with React for the frontend and Java with Spring Boot for the backend, using PostgreSQL as the database. Developed using Docker for containerization and DB and Backend deployed on Railway and Frontend deployed on Netlify.",
+                },
+                {
+                    name: "Personal Blog",
+                    tech: "NextJS · C# · ASP.NET Core · MySQL · Docker · GCP",
+                    description:
+                        "A personal blog platform where I can create and share my thoughts. Built with NextJS for the frontend and C# with ASP.NET Core for the backend, using MySQL as the database. Developed using Docker for containerization and deployed on Google Cloud Platform.",
+                },
+            ]
         },
+
         stack: { title: "Tech Stack" },
         contact: {
             title: "Contact",
@@ -115,12 +130,22 @@ export const translations = {
         },
         projects: {
             title: "Proyectos",
-            project1: {
-                name: "Sistema de Inventario v2",
-                tech: "Node.js · Express · MongoDB",
+            project: [{
+                name: "Mi Portafolio",
+                tech: "NextJS · TypeScript · TailwindCSS · AWS Amplify",
                 description:
-                    "Aplicación interna para gestionar stock en tiempo real. Maneja sincronización de datos entre 3 sucursales.",
-            },
+                    "Un sitio web de portafolio personal que muestra mi experiencia, proyectos y habilidades. Construido con NextJS y TypeScript, estilizado con TailwindCSS y desplegado en AWS Amplify.",
+            }, {
+                name: "ComerBien (Aplicación de seguimiento de recetas y nutrición)",
+                tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
+                description:
+                    "Una aplicación web que permite a los usuarios realizar un seguimiento de sus comidas, recetas e ingesta nutricional. Construida con React para el frontend y Java con Spring Boot para el backend, utilizando PostgreSQL como base de datos. Desarrollada usando Docker para la contenedorización y desplegada en Railway (DB y Backend) y Netlify (Frontend).",
+            }, {
+                name: "Blog Personal",
+                tech: "NextJS · C# · ASP.NET Core · MySQL · Docker · GCP",
+                description:
+                    "Una plataforma de blog personal donde puedo crear y compartir mis pensamientos. Construida con NextJS para el frontend y C# con ASP.NET Core para el backend, utilizando MySQL como base de datos. Desarrollada usando Docker para la contenedorización y desplegada en Google Cloud Platform.",
+            }]
         },
         stack: { title: "Stack Tecnológico" },
         contact: {
@@ -177,12 +202,22 @@ export const translations = {
         },
         projects: {
             title: "Projets",
-            project1: {
-                name: "Système d'Inventaire v2",
-                tech: "Node.js · Express · MongoDB",
+            project: [{
+                name: "Mon Portefeuille",
+                tech: "NextJS · TypeScript · TailwindCSS · AWS Amplify",
                 description:
-                    "Application interne pour gérer le stock en temps réel. Gère la synchronisation des données entre 3 succursales.",
-            },
+                    "Un site web de portefeuille personnel présentant mon expérience, mes projets et mes compétences. Construit avec NextJS et TypeScript, stylisé avec TailwindCSS et déployé sur AWS Amplify.",
+            }, {
+                name: "ComerBien (Application de suivi de recettes et nutrition)",
+                tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
+                description:
+                    "Une application web qui permet aux utilisateurs de suivre leurs repas, recettes et apports nutritionnels. Construite avec React pour le frontend et Java avec Spring Boot pour le backend, utilisant PostgreSQL comme base de données. Développée en utilisant Docker pour la conteneurisation et déployée sur Railway (DB et Backend) et Netlify (Frontend).",
+            }, {
+                name: "Blog Personnel",
+                tech: "NextJS · C# · ASP.NET Core · MySQL · Docker · GCP",
+                description:
+                    "Une plateforme de blog personnel où je peux créer et partager mes pensées. Construite avec NextJS pour le frontend et C# avec ASP.NET Core pour le backend, en utilisant MySQL comme base de données. Développée en utilisant Docker pour la conteneurisation et déployée sur Google Cloud Platform.",
+            }]
         },
         stack: { title: "Stack Technique" },
         contact: {

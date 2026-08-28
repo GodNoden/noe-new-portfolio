@@ -34,7 +34,7 @@ export default function Home() {
           </h2>
           <div className="space-y-6">
             {t.experience.jobs.map((job) => (
-              <div key={job.role}>
+              <div key={`${job.company}-${job.role}`}>
                 <h3 className="font-medium text-gray-900 dark:text-gray-100">
                   {job.role}
                 </h3>
@@ -57,20 +57,21 @@ export default function Home() {
             {t.projects.title}
           </h2>
           <div className="space-y-6">
-            <div>
-              <h3 className="font-medium">
-                <a href="#" className="hover:underline">
-                  {t.projects.project1.name}
-                </a>
-              </h3>
-              <p className="text-sm text-gray-900 dark:text-gray-100 mb-2">
-                {t.projects.project1.tech}
-              </p>
-              <p className="text-gray-900 dark:text-gray-300">
-                {t.projects.project1.description}
-              </p>
-            </div>
-            {/* Más proyectos... */}
+            {t.projects.project.map((project) => (
+              <div key={project.name}>
+                <h3 className="font-medium">
+                  <a href="#" className="hover:underline">
+                    {project.name}
+                  </a>
+                </h3>
+                <p className="text-sm text-gray-900 dark:text-gray-100 mb-2">
+                  {project.tech}
+                </p>
+                <p className="text-gray-900 dark:text-gray-300">
+                  {project.description}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
