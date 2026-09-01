@@ -29,7 +29,6 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
       suppressHydrationWarning
     >
       <body
-        className="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors"
         suppressHydrationWarning
       >
         <ThemeProvider

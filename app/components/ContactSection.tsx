@@ -25,8 +25,8 @@ export default function ContactSection() {
         {
             id: 'email',
             label: t.contact.email,
-            value: 'noe2000@live.com.mx',
-            href: 'mailto:noe2000@live.com.mx',
+            value: 'quezadanoe@gmail.com',
+            href: 'mailto:quezadanoe@gmail.com',
             Icon: Mail,
         },
         {
@@ -77,7 +77,7 @@ export default function ContactSection() {
                         href={href}
                         target={id !== 'email' ? '_blank' : undefined}
                         rel={id !== 'email' ? 'noopener noreferrer' : undefined}
-                        className="group flex flex-col items-center p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600 transition-all"
+                        className="group flex flex-col items-center p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-md transition-all"
                     >
                         <Icon className="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors mb-3" />
                         <div className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-1">

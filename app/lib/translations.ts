@@ -10,7 +10,7 @@ const experienceMeta = {
         link: "https://dxc.com/",
     },
     folio3: {
-        role: "Backend Developer Jr.",
+        role: "Software Developer Jr.",
         company: "Folio3 Software Inc.",
         link: "https://folio3.com/",
     },
@@ -93,7 +93,7 @@ export const translations = {
             relocation: "Open to relocation",
             email: "Email",
             linkedin: "LinkedIn",
-            github: "GitHub",  
+            github: "GitHub",
             contactMe: "Contact Me",
         },
         roadmap: {

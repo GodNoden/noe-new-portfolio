@@ -11,16 +11,19 @@ export default function ProjectsSection() {
             </h2>
             <div className="space-y-6">
                 {t.projects.items.map((project) => (
-                    <div key={project.name}>
-                        <h3 className="font-medium">
+                    <div
+                        key={project.name}
+                        className="p-5 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-md transition-shadow"
+                    >
+                        <h3 className="font-medium mb-2">
                             <a href="#" className="hover:underline">
                                 {project.name}
                             </a>
                         </h3>
-                        <p className="text-sm text-gray-900 dark:text-gray-100 mb-2">
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                             {project.tech}
                         </p>
-                        <p className="text-gray-900 dark:text-gray-300">
+                        <p className="text-gray-700 dark:text-gray-300">
                             {project.description}
                         </p>
                     </div>
