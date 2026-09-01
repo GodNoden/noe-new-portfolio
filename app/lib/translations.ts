@@ -53,7 +53,7 @@ export const translations = {
         },
         projects: {
             title: "Projects",
-            project: [
+            items: [
                 {
                     name: "My Portfolio",
                     tech: "NextJS · TypeScript · TailwindCSS · AWS Amplify",
@@ -75,11 +75,26 @@ export const translations = {
             ]
         },
 
-        stack: { title: "Tech Stack" },
+        stack: {
+            title: "Tech Stack",
+            categories: {
+                languages: "Languages",
+                frameworks: "Frameworks & Libraries",
+                cloud: "Cloud & DevOps",
+                databases: "Databases",
+                architecture: "Architecture & Patterns",
+            },
+        },
         contact: {
             title: "Contact",
-            intro:
-                "I'm open to backend development and software architecture opportunities.",
+            intro: "I'm open to backend development and software architecture opportunities.",
+            availability: "Available for remote work",
+            location: "Based in Mexico City",
+            relocation: "Open to relocation",
+            email: "Email",
+            linkedin: "LinkedIn",
+            github: "GitHub",  
+            contactMe: "Contact Me",
         },
         roadmap: {
             title: "Roadmap",
@@ -130,7 +145,7 @@ export const translations = {
         },
         projects: {
             title: "Proyectos",
-            project: [{
+            items: [{
                 name: "Mi Portafolio",
                 tech: "NextJS · TypeScript · TailwindCSS · AWS Amplify",
                 description:
@@ -147,11 +162,26 @@ export const translations = {
                     "Una plataforma de blog personal donde puedo crear y compartir mis pensamientos. Construida con NextJS para el frontend y C# con ASP.NET Core para el backend, utilizando MySQL como base de datos. Desarrollada usando Docker para la contenedorización y desplegada en Google Cloud Platform.",
             }]
         },
-        stack: { title: "Stack Tecnológico" },
+        stack: {
+            title: "Stack Tecnológico",
+            categories: {
+                languages: "Lenguajes",
+                frameworks: "Frameworks y librerías",
+                cloud: "Cloud y DevOps",
+                databases: "Bases de datos",
+                architecture: "Arquitectura y patrones",
+            },
+        },
         contact: {
             title: "Contacto",
-            intro:
-                "Estoy abierto a oportunidades en desarrollo backend y arquitectura de software.",
+            intro: "Estoy abierto a oportunidades en desarrollo backend y arquitectura de software.",
+            availability: "Disponible para trabajo remoto",
+            location: "Basado en Ciudad de México",
+            relocation: "Disponible para mudarse",
+            email: "Correo",
+            linkedin: "LinkedIn",
+            github: "GitHub",
+            contactMe: "Contactarme",
         },
         roadmap: {
             title: "Roadmap",
@@ -202,7 +232,7 @@ export const translations = {
         },
         projects: {
             title: "Projets",
-            project: [{
+            items: [{
                 name: "Mon Portefeuille",
                 tech: "NextJS · TypeScript · TailwindCSS · AWS Amplify",
                 description:
@@ -219,11 +249,26 @@ export const translations = {
                     "Une plateforme de blog personnel où je peux créer et partager mes pensées. Construite avec NextJS pour le frontend et C# avec ASP.NET Core pour le backend, en utilisant MySQL comme base de données. Développée en utilisant Docker pour la conteneurisation et déployée sur Google Cloud Platform.",
             }]
         },
-        stack: { title: "Stack Technique" },
+        stack: {
+            title: "Stack Technique",
+            categories: {
+                languages: "Langages",
+                frameworks: "Frameworks et bibliothèques",
+                cloud: "Cloud et DevOps",
+                databases: "Bases de données",
+                architecture: "Architecture et patterns",
+            },
+        },
         contact: {
             title: "Contact",
-            intro:
-                "Je suis ouvert aux opportunités en développement backend et architecture logicielle.",
+            intro: "Je suis ouvert aux opportunités en développement backend et architecture logicielle.",
+            availability: "Disponible pour travail à distance",
+            location: "Basé à Mexico",
+            relocation: "Disponible pour se déplacer",
+            email: "Email",
+            linkedin: "LinkedIn",
+            github: "GitHub",
+            contactMe: "Contactez-moi",
         },
         roadmap: {
             title: "Roadmap",
