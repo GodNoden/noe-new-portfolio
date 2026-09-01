@@ -20,6 +20,9 @@ export default function Home() {
           <p className="text-gray-600 dark:text-gray-400 mt-2">
             {t.title}<br />{t.subtitle}
           </p>
+          <div className="mt-4">
+            <ResumeViewer />
+          </div>
         </div>
         <nav className="flex flex-col space-y-3">
           <Link href="#experience">{t.nav.experience}</Link>
@@ -41,10 +44,6 @@ export default function Home() {
         <RoadmapSection />
 
         <ContactSection />
-
-        <div className="flex justify-center py-8">
-          <ResumeViewer />
-        </div>
 
       </div>
     </div>
