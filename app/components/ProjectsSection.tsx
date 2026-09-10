@@ -1,4 +1,3 @@
-// components/ProjectsSection.tsx
 import { useTranslation } from '../lib/context';
 
 export default function ProjectsSection() {
@@ -15,11 +14,19 @@ export default function ProjectsSection() {
                         key={project.name}
                         className="p-5 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-md transition-shadow"
                     >
-                        <h3 className="font-medium mb-2">
-                            <a href="#" className="hover:underline">
-                                {project.name}
-                            </a>
-                        </h3>
+                        <div className="flex items-center justify-between gap-2 mb-2">
+                            <h3 className="font-medium">
+                                <a href="#" className="hover:underline">
+                                    {project.name}
+                                </a>
+                            </h3>
+                            {project.status === 'in-progress' && (
+                                <span className="text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">
+                                    {t.projects.inProgress}
+                                </span>
+                            )}
+                        </div>
+
                         <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                             {project.tech}
                         </p>

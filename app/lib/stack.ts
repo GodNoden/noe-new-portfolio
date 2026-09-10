@@ -1,22 +1,21 @@
 export type StackCategory = {
-    id: 'languages' | 'frameworks' | 'cloud' | 'databases' | 'architecture'
+    id: 'languages' | 'frameworks' | 'cloud' | 'databases' | 'architecture' | 'testing'
     items: string[]
 }
 
 export const stackCategories: StackCategory[] = [
     {
         id: 'languages',
-        items: ["Java", "Python", "PHP", "TypeScript", "SQL"],
+        items: ["Java", "SQL", "PHP", "TypeScript"],
     },
     {
         id: 'frameworks',
-        items: ["Spring Boot", "Laravel", "FastAPI", "Express", "JUnit", "PHPUnit"],
+        items: ["Spring Boot", "Laravel"],
     },
     {
         id: 'cloud',
         items: [
-            "AWS (Lambda, API Gateway, SQS, RDS, S3)",
-            "CloudFormation",
+            "AWS (Lambda, API Gateway, CloudFormation, S3, Cognito, CloudWatch, IAM)",
             "Docker",
             "CI/CD (GitHub Actions)",
             "Linux",
@@ -24,18 +23,21 @@ export const stackCategories: StackCategory[] = [
     },
     {
         id: 'databases',
-        items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+        items: ["PostgreSQL", "MySQL"],
     },
     {
         id: 'architecture',
         items: [
             "REST API Design",
-            "OpenAPI / Swagger",
-            "Event-driven architecture",
+            "Swagger",
             "Microservices",
             "Serverless",
             "Layered architecture (Controller–Service–Repository)",
             "MVC",
         ],
+    },
+    {
+        id: 'testing',
+        items: ["JUnit", "PHPUnit"],
     },
 ]

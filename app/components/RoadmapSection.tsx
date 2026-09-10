@@ -1,9 +1,8 @@
-import { useTranslation } from '../lib/context';
-import RoadmapItemCard from './RoadmapItem';
-import { futureProjects, targetCertifications } from '../lib/roadmap';
+import { useTranslation } from '../lib/context'
+import RoadmapItemCard from './RoadmapItem'
 
 export default function RoadmapSection() {
-    const { t } = useTranslation();
+    const { t } = useTranslation()
 
     return (
         <section id="roadmap" className="scroll-mt-8">
@@ -17,8 +16,13 @@ export default function RoadmapSection() {
                         {t.roadmap.projects}
                     </h3>
                     <div className="space-y-0">
-                        {futureProjects.map((item) => (
-                            <RoadmapItemCard key={item.title} item={item} />
+                        {t.roadmap.futureProjects.map((item) => (
+                            <RoadmapItemCard
+                                key={item.id}
+                                item={item}
+                                statusLabels={t.roadmap.statusLabels}
+                                targetDateLabel={t.roadmap.targetDate}
+                            />
                         ))}
                     </div>
                 </div>
@@ -28,12 +32,17 @@ export default function RoadmapSection() {
                         {t.roadmap.certifications}
                     </h3>
                     <div className="space-y-0">
-                        {targetCertifications.map((item) => (
-                            <RoadmapItemCard key={item.title} item={item} />
+                        {t.roadmap.targetCertifications.map((item) => (
+                            <RoadmapItemCard
+                                key={item.id}
+                                item={item}
+                                statusLabels={t.roadmap.statusLabels}
+                                targetDateLabel={t.roadmap.targetDate}
+                            />
                         ))}
                     </div>
                 </div>
             </div>
         </section>
-    );
+    )
 }

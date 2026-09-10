@@ -53,43 +53,47 @@ export const translations = {
         },
         projects: {
             title: "Projects",
+            inProgress: "In-progress",
             items: [
                 {
                     name: "My Portfolio",
                     tech: "NextJS · TypeScript · TailwindCSS · AWS Amplify",
                     description:
                         "A personal portfolio website showcasing my experience, projects, and skills. Built with NextJS and TypeScript, styled with TailwindCSS, and deployed on AWS Amplify.",
+                    status: undefined,
                 },
                 {
                     name: "ComerBien (Recipe and Nutritional Tracking App)",
                     tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
                     description:
                         "A web application that allows users to track their meals, recipes, and nutritional intake. Built with React for the frontend and Java with Spring Boot for the backend, using PostgreSQL as the database. Developed using Docker for containerization and DB and Backend deployed on Railway and Frontend deployed on Netlify.",
+                    status: undefined,
                 },
                 {
                     name: "Personal Blog",
                     tech: "NextJS · C# · ASP.NET Core · MySQL · Docker · GCP",
                     description:
                         "A personal blog platform where I can create and share my thoughts. Built with NextJS for the frontend and C# with ASP.NET Core for the backend, using MySQL as the database. Developed using Docker for containerization and deployed on Google Cloud Platform.",
+                    status: "in-progress",
                 },
             ]
         },
-
         stack: {
             title: "Tech Stack",
             categories: {
                 languages: "Languages",
-                frameworks: "Frameworks & Libraries",
+                frameworks: "Frameworks",
                 cloud: "Cloud & DevOps",
                 databases: "Databases",
                 architecture: "Architecture & Patterns",
+                testing: "Testing libraries"
             },
         },
         contact: {
             title: "Contact",
             intro: "I'm open to backend development and software architecture opportunities.",
             availability: "Available for remote work",
-            location: "Based in Mexico City",
+            location: "Based in Guadalajara, Jalisco",
             relocation: "Open to relocation",
             email: "Email",
             linkedin: "LinkedIn",
@@ -101,6 +105,50 @@ export const translations = {
             nav: "Roadmap",
             projects: "Upcoming projects",
             certifications: "Target certifications",
+            targetDate: "Target",
+            statusLabels: {
+                completed: "Completed",
+                "in-progress": "In progress",
+                planned: "Planned",
+            },
+            futureProjects: [
+                {
+                    id: "payment-api",
+                    title: "Payment API with automatic reconciliation",
+                    description:
+                        "System that reconciles transactions between the payment gateway and the internal database, automatically detecting discrepancies.",
+                    targetDate: "Q4 2026",
+                    status: "in-progress",
+                },
+                {
+                    id: "redis-queue",
+                    title: "Queue engine with Redis",
+                    description:
+                        "Implement an asynchronous processing system for heavy tasks, replacing the current synchronous flow.",
+                    targetDate: "Q1 2027",
+                    status: "planned",
+                },
+            ],
+            targetCertifications: [
+                {
+                    id: "aws-saa",
+                    title: "AWS Certified Solutions Architect – Associate",
+                    description:
+                        "To deepen knowledge of distributed architecture design and managed services.",
+                    targetDate: "Dec 2026",
+                    status: "in-progress",
+                    url: "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+                },
+                {
+                    id: "ckad",
+                    title: "CKAD (Certified Kubernetes Application Developer)",
+                    description:
+                        "Formalize my experience deploying containers in production.",
+                    targetDate: "Q2 2027",
+                    status: "planned",
+                    url: "https://www.cncf.io/training/certification/ckad/",
+                },
+            ],
         },
         resume: {
             title: "Resume",
@@ -108,6 +156,7 @@ export const translations = {
             downloadButton: "Download",
             close: "Close",
         },
+
     },
     es: {
         name: "Noe Quezada",
@@ -145,38 +194,43 @@ export const translations = {
         },
         projects: {
             title: "Proyectos",
+            inProgress: "En proceso",
             items: [{
                 name: "Mi Portafolio",
                 tech: "NextJS · TypeScript · TailwindCSS · AWS Amplify",
                 description:
                     "Un sitio web de portafolio personal que muestra mi experiencia, proyectos y habilidades. Construido con NextJS y TypeScript, estilizado con TailwindCSS y desplegado en AWS Amplify.",
+                status: undefined,
             }, {
                 name: "ComerBien (Aplicación de seguimiento de recetas y nutrición)",
                 tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
                 description:
                     "Una aplicación web que permite a los usuarios realizar un seguimiento de sus comidas, recetas e ingesta nutricional. Construida con React para el frontend y Java con Spring Boot para el backend, utilizando PostgreSQL como base de datos. Desarrollada usando Docker para la contenedorización y desplegada en Railway (DB y Backend) y Netlify (Frontend).",
+                status: undefined,
             }, {
                 name: "Blog Personal",
                 tech: "NextJS · C# · ASP.NET Core · MySQL · Docker · GCP",
                 description:
                     "Una plataforma de blog personal donde puedo crear y compartir mis pensamientos. Construida con NextJS para el frontend y C# con ASP.NET Core para el backend, utilizando MySQL como base de datos. Desarrollada usando Docker para la contenedorización y desplegada en Google Cloud Platform.",
+                status: "in-progress",
             }]
         },
         stack: {
             title: "Stack Tecnológico",
             categories: {
                 languages: "Lenguajes",
-                frameworks: "Frameworks y librerías",
+                frameworks: "Frameworks",
                 cloud: "Cloud y DevOps",
                 databases: "Bases de datos",
                 architecture: "Arquitectura y patrones",
+                testing: "Librerias de testing"
             },
         },
         contact: {
             title: "Contacto",
             intro: "Estoy abierto a oportunidades en desarrollo backend y arquitectura de software.",
             availability: "Disponible para trabajo remoto",
-            location: "Basado en Ciudad de México",
+            location: "Basado en Guadalajara, Jalisco",
             relocation: "Disponible para mudarse",
             email: "Correo",
             linkedin: "LinkedIn",
@@ -188,6 +242,50 @@ export const translations = {
             nav: "Roadmap",
             projects: "Proyectos futuros",
             certifications: "Certificaciones en mira",
+            targetDate: "Objetivo",
+            statusLabels: {
+                completed: "Completado",
+                "in-progress": "En progreso",
+                planned: "Planificado",
+            },
+            futureProjects: [
+                {
+                    id: "payment-api",
+                    title: "API de pagos con conciliación automática",
+                    description:
+                        "Sistema que reconcilia transacciones entre la pasarela de pagos y la base de datos interna, detectando discrepancias automáticamente.",
+                    targetDate: "Q4 2026",
+                    status: "in-progress",
+                },
+                {
+                    id: "redis-queue",
+                    title: "Motor de colas con Redis",
+                    description:
+                        "Implementar un sistema de procesamiento asíncrono para tareas pesadas, reemplazando el procesamiento síncrono actual.",
+                    targetDate: "Q1 2027",
+                    status: "planned",
+                },
+            ],
+            targetCertifications: [
+                {
+                    id: "aws-saa",
+                    title: "AWS Certified Solutions Architect – Associate",
+                    description:
+                        "Para profundizar en diseño de arquitecturas distribuidas y servicios gestionados.",
+                    targetDate: "Dic 2026",
+                    status: "in-progress",
+                    url: "https://aws.amazon.com/es/certification/certified-solutions-architect-associate/",
+                },
+                {
+                    id: "ckad",
+                    title: "CKAD (Certified Kubernetes Application Developer)",
+                    description:
+                        "Formalizar mi experiencia desplegando contenedores en producción.",
+                    targetDate: "Q2 2027",
+                    status: "planned",
+                    url: "https://www.cncf.io/training/certification/ckad/",
+                },
+            ],
         },
         resume: {
             title: "Currículum",
@@ -232,38 +330,43 @@ export const translations = {
         },
         projects: {
             title: "Projets",
+            inProgress: "En cours",
             items: [{
                 name: "Mon Portefeuille",
                 tech: "NextJS · TypeScript · TailwindCSS · AWS Amplify",
                 description:
                     "Un site web de portefeuille personnel présentant mon expérience, mes projets et mes compétences. Construit avec NextJS et TypeScript, stylisé avec TailwindCSS et déployé sur AWS Amplify.",
+                status: undefined,
             }, {
                 name: "ComerBien (Application de suivi de recettes et nutrition)",
                 tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
                 description:
                     "Une application web qui permet aux utilisateurs de suivre leurs repas, recettes et apports nutritionnels. Construite avec React pour le frontend et Java avec Spring Boot pour le backend, utilisant PostgreSQL comme base de données. Développée en utilisant Docker pour la conteneurisation et déployée sur Railway (DB et Backend) et Netlify (Frontend).",
+                status: undefined,
             }, {
                 name: "Blog Personnel",
                 tech: "NextJS · C# · ASP.NET Core · MySQL · Docker · GCP",
                 description:
                     "Une plateforme de blog personnel où je peux créer et partager mes pensées. Construite avec NextJS pour le frontend et C# avec ASP.NET Core pour le backend, en utilisant MySQL comme base de données. Développée en utilisant Docker pour la conteneurisation et déployée sur Google Cloud Platform.",
+                status: "in-progress",
             }]
         },
         stack: {
             title: "Stack Technique",
             categories: {
                 languages: "Langages",
-                frameworks: "Frameworks et bibliothèques",
+                frameworks: "Frameworks",
                 cloud: "Cloud et DevOps",
                 databases: "Bases de données",
                 architecture: "Architecture et patterns",
+                testing: "Bibliothèques de tests"
             },
         },
         contact: {
             title: "Contact",
             intro: "Je suis ouvert aux opportunités en développement backend et architecture logicielle.",
             availability: "Disponible pour travail à distance",
-            location: "Basé à Mexico",
+            location: "Basé à Guadalajara, Jalisco",
             relocation: "Disponible pour se déplacer",
             email: "Email",
             linkedin: "LinkedIn",
@@ -275,6 +378,50 @@ export const translations = {
             nav: "Roadmap",
             projects: "Projets à venir",
             certifications: "Certifications visées",
+            targetDate: "Objectif",
+            statusLabels: {
+                completed: "Terminé",
+                "in-progress": "En cours",
+                planned: "Planifié",
+            },
+            futureProjects: [
+                {
+                    id: "payment-api",
+                    title: "API de paiement avec réconciliation automatique",
+                    description:
+                        "Système qui réconcilie les transactions entre la passerelle de paiement et la base de données interne, en détectant automatiquement les écarts.",
+                    targetDate: "T4 2026",
+                    status: "in-progress",
+                },
+                {
+                    id: "redis-queue",
+                    title: "Moteur de files d'attente avec Redis",
+                    description:
+                        "Mettre en place un système de traitement asynchrone pour les tâches lourdes, en remplacement du flux synchrone actuel.",
+                    targetDate: "T1 2027",
+                    status: "planned",
+                },
+            ],
+            targetCertifications: [
+                {
+                    id: "aws-saa",
+                    title: "AWS Certified Solutions Architect – Associate",
+                    description:
+                        "Approfondir la conception d'architectures distribuées et des services managés.",
+                    targetDate: "Déc 2026",
+                    status: "in-progress",
+                    url: "https://aws.amazon.com/fr/certification/certified-solutions-architect-associate/",
+                },
+                {
+                    id: "ckad",
+                    title: "CKAD (Certified Kubernetes Application Developer)",
+                    description:
+                        "Formaliser mon expérience de déploiement de conteneurs en production.",
+                    targetDate: "T2 2027",
+                    status: "planned",
+                    url: "https://www.cncf.io/training/certification/ckad/",
+                },
+            ],
         },
         resume: {
             title: "CV",
