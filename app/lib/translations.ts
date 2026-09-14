@@ -132,40 +132,50 @@ export const translations = {
             },
             futureProjects: [
                 {
-                    id: "payment-api",
-                    title: "Payment API with automatic reconciliation",
+                    id: "kafka-markets",
+                    title: "Global Markets Event Platform (Kafka Deep-Dive)",
                     description:
-                        "System that reconciles transactions between the payment gateway and the internal database, automatically detecting discrepancies.",
-                    targetDate: "Q4 2026",
+                        "Production-shaped streaming platform for global market data, built twice (Spring Boot and Quarkus) to exercise Kafka's core and advanced concepts: deliberate partitioning, exactly-once semantics, Kafka Streams windowing and joins, Schema Registry evolution, transactional outbox, and multi-broker failure behavior.",
+                    targetDate: "Q2 2027",
                     status: "in-progress",
-                },
-                {
-                    id: "redis-queue",
-                    title: "Queue engine with Redis",
-                    description:
-                        "Implement an asynchronous processing system for heavy tasks, replacing the current synchronous flow.",
-                    targetDate: "Q1 2027",
-                    status: "planned",
                 },
             ],
             targetCertifications: [
                 {
-                    id: "aws-saa",
-                    title: "AWS Certified Solutions Architect – Associate",
+                    id: "aws-ccp",
+                    title: "AWS Certified Cloud Practitioner",
                     description:
-                        "To deepen knowledge of distributed architecture design and managed services.",
-                    targetDate: "Dec 2026",
-                    status: "in-progress",
-                    url: "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+                        "Foundational AWS certification covering core services, billing, security, and the shared responsibility model.",
+                    targetDate: "Q4 2026",
+                    status: "planned",
+                    url: "https://aws.amazon.com/certification/certified-cloud-practitioner/",
                 },
                 {
-                    id: "ckad",
-                    title: "CKAD (Certified Kubernetes Application Developer)",
+                    id: "gcp-ace",
+                    title: "Google Cloud Associate Cloud Engineer",
                     description:
-                        "Formalize my experience deploying containers in production.",
+                        "Deploying, monitoring, and maintaining GCP projects and services. Complements the AWS foundation with a second cloud provider.",
+                    targetDate: "Q1 2027",
+                    status: "planned",
+                    url: "https://cloud.google.com/certification/cloud-engineer",
+                },
+                {
+                    id: "cambridge-c1",
+                    title: "Cambridge C1 Advanced (CAE)",
+                    description:
+                        "Advanced English certification with lifetime validity. Formal proof of professional working proficiency.",
                     targetDate: "Q2 2027",
                     status: "planned",
-                    url: "https://www.cncf.io/training/certification/ckad/",
+                    url: "https://www.cambridgeenglish.org/exams-and-tests/advanced/",
+                },
+                {
+                    id: "bmc",
+                    title: "Bloomberg Market Concepts (BMC)",
+                    description:
+                        "Self-paced certification covering financial markets, currencies, fixed income, and equities. Builds the domain vocabulary for working on financial systems.",
+                    targetDate: "Q3 2027",
+                    status: "planned",
+                    url: "https://www.bloomberg.com/professional/product/bloomberg-market-concepts/",
                 },
             ],
         },
@@ -291,40 +301,50 @@ export const translations = {
             },
             futureProjects: [
                 {
-                    id: "payment-api",
-                    title: "API de pagos con conciliación automática",
+                    id: "kafka-markets",
+                    title: "Global Markets Event Platform (Kafka Deep-Dive)",
                     description:
-                        "Sistema que reconcilia transacciones entre la pasarela de pagos y la base de datos interna, detectando discrepancias automáticamente.",
-                    targetDate: "Q4 2026",
+                        "Plataforma de streaming con forma de producción para datos de mercados globales, construida dos veces (Spring Boot y Quarkus) para ejercitar conceptos core y avanzados de Kafka: particionamiento deliberado, semántica exactly-once, windowing y joins en Kafka Streams, evolución de esquemas con Schema Registry, transactional outbox y comportamiento ante fallo de múltiples brokers.",
+                    targetDate: "Q2 2027",
                     status: "in-progress",
-                },
-                {
-                    id: "redis-queue",
-                    title: "Motor de colas con Redis",
-                    description:
-                        "Implementar un sistema de procesamiento asíncrono para tareas pesadas, reemplazando el procesamiento síncrono actual.",
-                    targetDate: "Q1 2027",
-                    status: "planned",
                 },
             ],
             targetCertifications: [
                 {
-                    id: "aws-saa",
-                    title: "AWS Certified Solutions Architect – Associate",
+                    id: "aws-ccp",
+                    title: "AWS Certified Cloud Practitioner",
                     description:
-                        "Para profundizar en diseño de arquitecturas distribuidas y servicios gestionados.",
-                    targetDate: "Dic 2026",
-                    status: "in-progress",
-                    url: "https://aws.amazon.com/es/certification/certified-solutions-architect-associate/",
+                        "Certificación foundational de AWS que cubre servicios core, facturación, seguridad y el modelo de responsabilidad compartida.",
+                    targetDate: "Q4 2026",
+                    status: "planned",
+                    url: "https://aws.amazon.com/es/certification/certified-cloud-practitioner/",
                 },
                 {
-                    id: "ckad",
-                    title: "CKAD (Certified Kubernetes Application Developer)",
+                    id: "gcp-ace",
+                    title: "Google Cloud Associate Cloud Engineer",
                     description:
-                        "Formalizar mi experiencia desplegando contenedores en producción.",
+                        "Despliegue, monitoreo y mantenimiento de proyectos y servicios en GCP. Complementa la base de AWS con un segundo proveedor cloud.",
+                    targetDate: "Q1 2027",
+                    status: "planned",
+                    url: "https://cloud.google.com/certification/cloud-engineer?hl=es",
+                },
+                {
+                    id: "cambridge-c1",
+                    title: "Cambridge C1 Advanced (CAE)",
+                    description:
+                        "Certificación avanzada de inglés con validez de por vida. Prueba formal de dominio profesional del idioma.",
                     targetDate: "Q2 2027",
                     status: "planned",
-                    url: "https://www.cncf.io/training/certification/ckad/",
+                    url: "https://www.cambridgeenglish.org/exams-and-tests/advanced/",
+                },
+                {
+                    id: "bmc",
+                    title: "Bloomberg Market Concepts (BMC)",
+                    description:
+                        "Certificación autopaced que cubre mercados financieros, divisas, renta fija y renta variable. Construye el vocabulario de dominio para trabajar en sistemas financieros.",
+                    targetDate: "Q3 2027",
+                    status: "planned",
+                    url: "https://www.bloomberg.com/professional/product/bloomberg-market-concepts/",
                 },
             ],
         },
@@ -450,40 +470,50 @@ export const translations = {
             },
             futureProjects: [
                 {
-                    id: "payment-api",
-                    title: "API de paiement avec réconciliation automatique",
+                    id: "kafka-markets",
+                    title: "Global Markets Event Platform (Kafka Deep-Dive)",
                     description:
-                        "Système qui réconcilie les transactions entre la passerelle de paiement et la base de données interne, en détectant automatiquement les écarts.",
-                    targetDate: "T4 2026",
+                        "Plateforme de streaming aux allures de production pour les données de marchés mondiaux, construite deux fois (Spring Boot et Quarkus) afin d'exercer les concepts essentiels et avancés de Kafka : partitionnement délibéré, sémantique exactly-once, windowing et jointures dans Kafka Streams, évolution de schémas via Schema Registry, transactional outbox et comportement face à la défaillance de plusieurs brokers.",
+                    targetDate: "T2 2027",
                     status: "in-progress",
-                },
-                {
-                    id: "redis-queue",
-                    title: "Moteur de files d'attente avec Redis",
-                    description:
-                        "Mettre en place un système de traitement asynchrone pour les tâches lourdes, en remplacement du flux synchrone actuel.",
-                    targetDate: "T1 2027",
-                    status: "planned",
                 },
             ],
             targetCertifications: [
                 {
-                    id: "aws-saa",
-                    title: "AWS Certified Solutions Architect – Associate",
+                    id: "aws-ccp",
+                    title: "AWS Certified Cloud Practitioner",
                     description:
-                        "Approfondir la conception d'architectures distribuées et des services managés.",
-                    targetDate: "Déc 2026",
-                    status: "in-progress",
-                    url: "https://aws.amazon.com/fr/certification/certified-solutions-architect-associate/",
+                        "Certification foundational AWS couvrant les services essentiels, la facturation, la sécurité et le modèle de responsabilité partagée.",
+                    targetDate: "T4 2026",
+                    status: "planned",
+                    url: "https://aws.amazon.com/fr/certification/certified-cloud-practitioner/",
                 },
                 {
-                    id: "ckad",
-                    title: "CKAD (Certified Kubernetes Application Developer)",
+                    id: "gcp-ace",
+                    title: "Google Cloud Associate Cloud Engineer",
                     description:
-                        "Formaliser mon expérience de déploiement de conteneurs en production.",
+                        "Déploiement, surveillance et maintenance de projets et services GCP. Complète la base AWS avec un second fournisseur cloud.",
+                    targetDate: "T1 2027",
+                    status: "planned",
+                    url: "https://cloud.google.com/certification/cloud-engineer?hl=fr",
+                },
+                {
+                    id: "cambridge-c1",
+                    title: "Cambridge C1 Advanced (CAE)",
+                    description:
+                        "Certification d'anglais avancée à validité permanente. Preuve formelle de maîtrise professionnelle de la langue.",
                     targetDate: "T2 2027",
                     status: "planned",
-                    url: "https://www.cncf.io/training/certification/ckad/",
+                    url: "https://www.cambridgeenglish.org/exams-and-tests/advanced/",
+                },
+                {
+                    id: "bmc",
+                    title: "Bloomberg Market Concepts (BMC)",
+                    description:
+                        "Certification auto-rythmée couvrant les marchés financiers, les devises, les taux fixes et les actions. Construit le vocabulaire métier pour travailler sur des systèmes financiers.",
+                    targetDate: "T3 2027",
+                    status: "planned",
+                    url: "https://www.bloomberg.com/professional/product/bloomberg-market-concepts/",
                 },
             ],
         },
