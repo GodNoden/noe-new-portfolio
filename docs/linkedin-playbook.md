@@ -15,11 +15,31 @@ Extraído del PDF que exportaste. Esto es literalmente lo que ve un reclutador:
 | Ubicación | Guadalajara, Jalisco, Mexico |
 | Contacto | quezadanoe@gmail.com · +52 6241751162 (móvil) |
 | URL | www.linkedin.com/in/noe-ixmak-quezada |
-| Aptitudes fijadas | **TypeScript · Internacionalización · Tailwind CSS v4** |
+| Aptitudes fijadas | **Ya corregidas**: Java · Spring Boot · Amazon Web Services (AWS) · Docker · Scrum (antes tenías TypeScript · Internacionalización · Tailwind CSS v4) |
 | Experiencia | TekChoice LLC — Backend Engineer (Jun 2024 – Presente, 2 años 4 meses) · DXC Technology — Backend Engineer Jr. (Sep 2023 – Jun 2024, 10 meses) · Folio3 Software — Software Engineer Jr. (Jul 2022 – Mar 2023, 9 meses) |
 | Educación | Universidad de Guadalajara — **Ciclo Formativo de Grado Superior, Ciencias de la computación · (2018 – 2021)** |
 | Resumen | Existe, ~5 líneas. Sin una sola métrica y sin mencionar ningún proyecto |
 | Destacados · Proyectos · Certificaciones · Idiomas | **No aparecen en el PDF: están vacíos** |
+
+### Lo que el PDF no mostraba (visto en las capturas)
+
+El PDF exportado omite secciones enteras. Las capturas revelan el resto, y hay más de lo que parecía:
+
+| Hallazgo | Detalle |
+|---|---|
+| 🔴 **Apariciones en búsquedas** | **1 en los últimos 7 días.** 17 visualizaciones del perfil, 0 impresiones de publicaciones |
+| 🔴 **Red** | **52 contactos**, 56 seguidores, **0 publicaciones** |
+| 🟠 **Proyectos: 4** | Personal Portfolio · ComerBien · Bolsa Mexicana de Valores — Technical Audit · Kapital Landing Page. **Falta Aggora**, tu proyecto de backend más fuerte |
+| 🟠 **Aptitudes invertidas** | Folio3 (2022) arrastra **30** aptitudes; **TekChoice (tu trabajo actual) solo 4**. Ver sección 7 |
+| 🟠 **Ficha del portfolio con datos falsos** | El proyecto "Personal Portfolio" está etiquetado como **React.js y Cloudflare**. Tu portfolio es **Next.js sobre AWS**. Ni React ni Cloudflare |
+| 🟠 **Miniatura obsoleta del portfolio** | La tarjeta muestra una versión antigua de tu web con el nombre **"Noe Ixmak Quezada Torres"** y el cargo **"Software Development Engineer"**. LinkedIn cacheó esa previsualización y no la ha vuelto a leer |
+| 🟡 **Tercer nombre distinto** | LinkedIn: "Noe Ixmak Quezada" · miniatura antigua: "Noe Ixmak Quezada Torres" · CV y web: "Noe Quezada" |
+| 🟡 **Descripción de Kapital mal formada** | Empieza con *"I'm a Backend Engineer with 4+ years of experience in Java…"*, que es una bio, no la descripción de un proyecto. Viene del README del repositorio |
+| ✅ **Titular, banner y "Acerca de"** | Correctos. El banner con `www.ixmak.com` y "B.S. in Computer Systems Engineering" funciona |
+
+**Sobre la miniatura obsoleta:** cuando el portfolio nuevo esté desplegado, usa el [Post Inspector de LinkedIn](https://www.linkedin.com/post-inspector/) con `https://www.ixmak.com` para forzar a LinkedIn a releer la tarjeta Open Graph. Ya generamos una imagen de previsualización correcta (1200×630), pero LinkedIn no la verá hasta que le digas explícitamente que vuelva a rastrear la URL.
+
+**Sobre los 52 contactos:** es el techo de todo lo demás. Un perfil con menos de ~150 conexiones se lee como inactivo, y LinkedIn limita el alcance de las publicaciones de cuentas con redes pequeñas. Antes de publicar nada, conecta con excompañeros de TekChoice, DXC y Folio3, y con compañeros de la universidad. Es la acción de mayor retorno del documento y no cuesta más de una hora.
 
 Un reclutador compara LinkedIn, tu CV y tu portfolio. Estos son los choques reales entre los tres:
 
@@ -64,15 +84,17 @@ Y asegúrate de que la sección **Educación** de LinkedIn quede como una sola e
 
 ---
 
-## 1. Los 5 cambios de mayor impacto
+## 1. Los 6 cambios de mayor impacto
 
-Ordenados por relación impacto/esfuerzo: primero lo que más mueve la aguja y menos tiempo cuesta.
+Ordenados por relación impacto/esfuerzo, ya con el perfil a la vista. El orden cambió dos veces respecto a la primera versión: el titular no era el problema, y la red pesa más que varios detalles de contenido.
 
-### 1. Aptitudes (Skills): desfijar las 3 actuales y fijar Java, Spring Boot y AWS — 10 minutos
+### 1. Aptitudes (Skills): limpiar la lista y reasignarla a TekChoice — 10 minutos
 
-Hoy tienes fijadas **TypeScript, Internacionalización y Tailwind CSS v4**. Son las tres que aparecen junto a tu nombre en la vista previa y las que LinkedIn usa para emparejarte con las búsquedas de reclutadores. Es el campo más roto de tu perfil y el que menos tiempo cuesta arreglar.
+✅ **Lo primero ya está hecho:** las tres fijadas pasaron de `TypeScript · Internacionalización · Tailwind CSS v4` a **Java · Spring Boot · Amazon Web Services (AWS)**, que es lo correcto.
 
-**Acción:** desfija las tres actuales y fija **Java**, **Spring Boot** y **Amazon Web Services (AWS)**. Después pega la lista completa de la sección 7.
+Queda lo de fondo, que es el motivo por el que la sección se siente desordenada: hay **49 aptitudes** con duplicados, aptitudes que no son aptitudes y blandas mezcladas con técnicas, y están **asociadas al empleo equivocado** (Folio3 arrastra 30; TekChoice solo 4).
+
+**Acción:** deja la lista exacta de 50 de la sección 7 —18 altas, 17 bajas— y reasigna las técnicas a TekChoice. Es el cambio que más mueve tus apariciones en búsquedas, que hoy son **una por semana**.
 
 ### 2. Destacados (Featured) y Proyectos — 15 minutos
 
@@ -97,6 +119,12 @@ Son dos problemas distintos. Primero, coherencia: LinkedIn dice "Engineer" donde
 Tu resumen actual habla de actitud y de aficiones, pero no menciona un solo resultado: ni Lambda, ni Fiserv–DNA, ni el CLS de 0.689 a 0. Solo se ven ~3 líneas antes del "ver más", y hoy esas 3 líneas se gastan en describirte en lugar de demostrar.
 
 **Acción:** pega la versión EN (y ES si mantienes el perfil bilingüe) de la sección 4.
+
+### 6. Red: pasar de 52 a 150+ contactos — 1 hora
+
+Tienes **52 contactos** y **1 aparición en búsquedas**. Aunque arregles todas las aptitudes, LinkedIn limita el alcance de las cuentas con redes pequeñas, y un reclutador que entra a tu perfil ve "52 contactos" antes de leer nada. Es la señal de "cuenta abandonada", y hoy juega en contra tuya en cada visita.
+
+**Acción:** busca a excompañeros de TekChoice, DXC y Folio3, y a compañeros de la Universidad de Guadalajara. Conecta sin mensaje o con una línea. No hace falta que nadie te recomiende: basta con que el número deje de gritar abandono. Se hace en una sentada y es la acción con mejor retorno de todo el documento.
 
 ### Y en la misma sesión: idiomas
 
@@ -123,13 +151,13 @@ Estos son hechos verificados y cada uno tiene una corrección concreta. Hazlas e
 
 ### Qué hacer hoy, esta semana y este mes
 
-| Hoy (≈40 min) | Esta semana (≈3 horas) | Este mes (≈6 horas) |
+| Hoy (≈1 h 40 min) | Esta semana (≈3 horas) | Este mes (≈6 horas) |
 |---|---|---|
-| Desfijar TypeScript, Internacionalización y Tailwind CSS v4; fijar Java, Spring Boot y AWS (sección 7) | Pegar el About en EN y ES (sección 4) | Agregar Inglés B2 y Francés B1 (sección 10) |
-| Subir los 4 Destacados en orden y crear la sección Proyectos (sección 5) | Reescribir los 3 empleos con bullets métrica primero (sección 6) | Publicar los 2 primeros posts (sección 12) |
-| Corregir la educación en LinkedIn (sección 0, #1) | Unificar cargos y fechas de Folio3 en LinkedIn, CV y portfolio | Pedir 2 recomendaciones con el mensaje de la sección 11 |
-| Revisar URL y perfil público (sección 13) | Corregir "Led" → "Contributed to" en portfolio y CVs | Activar "Open to work" con las preferencias de la sección 14 |
-| — | Foto y banner (sección 2) | Fijar fecha de examen AWS Cloud Practitioner (Q4 2026) |
+| Limpiar y reordenar las aptitudes: 18 altas, 17 bajas (sección 7) | Reasignar aptitudes a TekChoice y quitarlas de Folio3 (sección 7) | Agregar Inglés B2 y Francés B1 (sección 10) |
+| Conectar con 50+ excompañeros de TekChoice, DXC y Folio3 (sección 1, punto 6) | Pegar el About en EN y ES (sección 4) | Publicar los 2 primeros posts (sección 12) |
+| Agregar Aggora a Proyectos y arreglar la ficha del portfolio (sección 5) | Reescribir los 3 empleos con bullets métrica primero (sección 6) | Pedir 2 recomendaciones con el mensaje de la sección 11 |
+| Corregir la educación en LinkedIn (sección 0, #1) | Unificar cargos y fechas de Folio3 en LinkedIn, CV y portfolio | Activar "Open to work" con las preferencias de la sección 14 |
+| Refrescar la tarjeta del portfolio con el Post Inspector | Foto y banner (sección 2) | Fijar fecha de examen AWS Cloud Practitioner (Q4 2026) |
 
 ---
 
@@ -495,85 +523,137 @@ Los reclutadores técnicos leen los bullets buscando verbo + tecnología + resul
 
 ## 7. Aptitudes / Skills
 
-### Qué hacer
+> **Versión 2 de esta sección.** La primera versión recomendaba una lista construida a ciegas, y de hecho **contribuía al problema**: sugería mantener arriba cosas como `Tailwind CSS`, `Astro`, `CSS Container Queries` e `Internationalization (i18n)`, que son exactamente el tipo de aptitud que hoy ensucia tu perfil. Esta versión parte de tu lista real (49 aptitudes) y la reconstruye.
 
-- LinkedIn permite **hasta 50 aptitudes** y **fija 3** en la parte superior.
-- Fija las que un reclutador busca literalmente y que además dominas en producción.
-- Ordena el resto por relevancia al puesto objetivo (backend Java/AWS), no alfabéticamente.
-- No agregues nada que no esté en la lista de abajo sin poder defenderlo en una prueba técnica.
-- Pide validaciones: cada aptitud fijada con 2–3 confirmaciones de compañeros sube en las búsquedas.
+### Por qué se siente messy: son tres causas distintas
 
-### Las 3 que debes fijar
+**1. Aptitudes que no son aptitudes.** LinkedIn autocompleta lo que escribes al crear un proyecto, y así entraron `Internacionalización`, `Tailwind CSS v4` y `Parámetros de medición`. No son competencias evaluables ni existen en el catálogo estándar; aparecen asignadas a *Kapital Landing Page* y a *Bolsa Mexicana de Valores*, dos proyectos que no son de backend. Un reclutador que lee "Internacionalización · Proyecto: Kapital" no aprende nada.
+
+**2. Duplicados que se solapan.** Tienes pares que dicen lo mismo dos veces, y eso infla la lista sin sumar señal nueva:
+
+| Duplicado | Sobra |
+|---|---|
+| `Spring Boot` + `Spring Framework` + `Spring MVC` | Mantén los tres, pero son uno solo conceptualmente: no agregues más del ecosistema |
+| `Git` + `Control de versiones` | `Control de versiones` |
+| `JIRA` + `Herramientas Atlassian` | `Herramientas Atlassian` |
+| `Scrum` + `Metodologías ágiles` | Ninguno, pero no agregues una tercera |
+| `Desarrollo de API` + `Desarrollo de software` + `Conceptos de programación` | Las dos últimas |
+| `Java` + `JavaScript` + `TypeScript` | Ninguno, pero no agregues más lenguajes de frontend |
+
+**3. Aptitudes blandas mezcladas con técnicas.** `Razonamiento analítico`, `Resolución de problemas`, `Trabajo en equipo`, `Capacidad de análisis` e `Intercambio de conocimientos` no las busca ningún reclutador con filtros, ocupan cinco de tus cincuenta casillas y diluyen la señal técnica. Todo el mundo las tiene; por eso no diferencian.
+
+### La lista de 50, ya ordenada
+
+Fija las tres primeras. Pega el resto en este orden exacto: LinkedIn respeta el orden de la lista y las primeras posiciones pesan más en las búsquedas.
 
 ```text
-1. Java
-2. Spring Boot
-3. Amazon Web Services (AWS)
-```
-
-### Resto de la lista (hasta 50, ya ordenada)
-
-Pega en este orden, de arriba hacia abajo:
-
-```text
-TypeScript
-Bash
-PHP
-SQL
-Laravel
-Quarkus
-ASP.NET Core
-C#
-Apache Kafka
-Kafka Streams
-Event-Driven Architecture
+Java
+Spring Boot
+Amazon Web Services (AWS)
 AWS Lambda
-API Gateway
 AWS CloudFormation
-Amazon S3
-Amazon Cognito
+Amazon API Gateway
 Amazon CloudWatch
-AWS IAM
-Microsoft Azure
-Google Cloud Platform (GCP)
+Amazon S3
+Serverless Computing
+Microservices
+Desarrollo de API
+Apache Kafka
+Apache Kafka Streams
+Event-Driven Architecture
+Prometheus
+WebSockets
 Docker
 CI/CD
 GitHub Actions
 Linux
 PostgreSQL
+SQL
 MySQL
-REST API Design
-Swagger
-Microservices
-Serverless Computing
-Layered Architecture
-MVC
+NoSQL
+Administración de bases de datos
+Spring Framework
+Spring MVC
+Modelo-Vista-Controlador (MVC)
+Arquitectura de software
+Quarkus
+Prueba unitaria
 JUnit
-PHPUnit
-Unit Testing
-Prometheus
-WebSockets
-React
-Next.js
-Astro
-Angular
-Tailwind CSS
-CSS Container Queries
-Internationalization (i18n)
-Web Performance
-Core Web Vitals
-Web Accessibility
+Pruebas de rendimiento del software
 Git
-Jira
-Postman
+JIRA
 Scrum
+Metodologías ágiles
+Maven
+Postman
+TypeScript
+JavaScript
+PHP
+Python
+Bash
+Fiserv - DNA
+Fintech
+React.js
+Laravel
+HTML
+CSS
 ```
 
-Si prefieres quedarte en 45–50, corta desde el final: lo último que se sacrifica es Scrum, Postman y Jira. **No borres** Azure, Bash, Git, Jira ni Postman: los tienes en el CV y LinkedIn debe coincidir (problema 4 de divergencia de stack). Tampoco borres Laravel: está en tu CV en inglés y es real.
+**Las 18 que faltan y hay que agregar:** `Amazon API Gateway`, `Amazon CloudWatch`, `Amazon S3`, `Serverless Computing`, `Microservices`, `Apache Kafka`, `Apache Kafka Streams`, `Event-Driven Architecture`, `Prometheus`, `WebSockets`, `CI/CD`, `GitHub Actions`, `Arquitectura de software`, `JUnit`, `Postman`, `Bash`, `Fintech`, `Quarkus`.
+
+`Apache Kafka` es la más importante de todas: es tu proyecto más fuerte (Aggora) y hoy no aparece en ninguna casilla. Quien busca perfiles con Kafka —que es exactamente quien contrata backend de sistemas financieros— no te encuentra.
+
+### Las 17 que hay que borrar
+
+```text
+Internacionalización
+Tailwind CSS v4
+Astro.js
+Cloudflare
+Node.js
+Herramientas Atlassian
+Control de versiones
+Intercambio de conocimientos
+Capacidad de análisis
+Razonamiento analítico
+Resolución de problemas
+Trabajo en equipo
+Desarrollo de software
+Conceptos de programación
+Parámetros de medición
+Inglés
+Francés
+```
+
+`Inglés` y `Francés` no se borran para esconderlos: van en la sección **Idiomas**, que es donde un reclutador los busca y donde se puede indicar el nivel. Como aptitud, "Inglés" sin nivel no comunica nada.
+
+No borres `React.js`, `Laravel`, `HTML`, `CSS`, `PHP`, `Python` ni `Maven`: son reales, están en tus proyectos y en tus CVs, y quitarlas crearía la divergencia que este documento intenta evitar. Simplemente van al final, no compiten por la atención.
+
+### El problema más grave de esta sección: las aptitudes están invertidas
+
+No es solo la lista; es **a qué experiencia está asociada cada aptitud**:
+
+| Dónde | Cuántas aptitudes |
+|---|---|
+| Folio3 Software (2022, Laravel) | **30** |
+| Educación | 9 |
+| Proyectos: Kapital / ComerBien / BMV / Portfolio | 4 + 4 + 2 + 2 |
+| DXC Technology (2023) | 4 |
+| **TekChoice LLC (tu trabajo actual)** | **4** |
+
+Tu trabajo actual —el único con AWS, Lambda, serverless y core bancario, el que quieres que mire un reclutador— es el que tiene el bloque de aptitudes más pobre, mientras que un puesto de 2022 en Laravel arrastra treinta. La lectura que hace un reclutador es la contraria a la que buscas: parece que tu experiencia fuerte es la antigua.
+
+**Qué hacer:** entra a TekChoice LLC → editar → Aptitudes, y asocia ahí `Java`, `Spring Boot`, `Amazon Web Services (AWS)`, `AWS Lambda`, `AWS CloudFormation`, `Amazon API Gateway`, `Amazon CloudWatch`, `Serverless Computing`, `Docker`, `CI/CD`, `Desarrollo de API`, `Fiserv - DNA`, `PostgreSQL` y `Git`. Luego ve a Folio3 y quita todo lo que no sea de ese empleo (`Laravel`, `PHP`, `MySQL`, `MVC`, `Maven`, `JIRA`, `Scrum`, `Prueba unitaria`). No se borra la aptitud, solo se reasigna a quien corresponde.
 
 ### Por qué importa
 
-Las aptitudes alimentan el motor de búsqueda de LinkedIn y el de los ATS que leen tu perfil exportado. Fijar las 3 correctas hace que quien abre tu perfil en 5 segundos vea exactamente el perfil que busca: Java, Spring Boot, AWS. Y una lista completa de 50 te hace aparecer en búsquedas de reclutadores que filtrán por tecnología específica (por ejemplo "Kafka" o "Quarkus"), donde hoy probablemente no existes.
+Las aptitudes alimentan el motor de búsqueda de LinkedIn. Y aquí tienes la prueba, en tus propias analíticas:
+
+> **1 aparición en búsquedas en los últimos 7 días.**
+
+Un perfil con 49 aptitudes y 4 años de experiencia que aparece **una vez por semana** en los resultados de búsqueda está, en la práctica, fuera del mercado. Las aptitudes no son decoración: son el índice con el que LinkedIn decide si existes cuando un reclutador filtra por "Java", "Spring Boot" o "Kafka".
+
+Arreglar la lista no basta por sí solo —la red social y la actividad también pesan, ver secciones 11 y 12— pero es la palanca más barata que tienes y la que desbloquea todo lo demás.
 
 ---
 

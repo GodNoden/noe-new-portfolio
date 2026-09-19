@@ -78,6 +78,24 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /*
+   * Tailwind v4 removed the `cursor: pointer` that v3's preflight applied to
+   * buttons, so every control silently falls back to the OS arrow and stops
+   * reading as clickable. Restore it for the controls this site actually uses:
+   *   - `button`            the résumé trigger and the modal close button
+   *   - `[role='switch']`   the theme toggle (Base UI renders a <span>, not a button)
+   *   - `select`            the language picker
+   * Links are unaffected: they already get `pointer` from the browser.
+   * Disabled controls keep the arrow, so they never look actionable.
+   * Declared in `base` so a `cursor-*` utility can still override it per element.
+   */
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  [role='switch']:not([aria-disabled='true']),
+  select:not(:disabled) {
+    cursor: pointer;
+  }
 }
 
 /* Transición sincronizada para el cambio de tema en todo el sitio */
