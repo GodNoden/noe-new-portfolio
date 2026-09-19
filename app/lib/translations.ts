@@ -97,11 +97,11 @@ export const translations = {
                 },
                 {
                     name: "Aggora — Kafka Event Pipeline for Market Data",
-                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Avro · Schema Registry · Prometheus · Docker · Angular",
+                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Prometheus · Docker",
                     description:
-                        "Event-driven market data pipeline built twice, in Spring Boot and Quarkus, both writing the same topics so their behaviour can be compared side by side. Covers the whole path: ingestion, schema-validated normalization, poison-pill handling with dead-letter and retry topics, transactional producers for exactly-once semantics, and windowed analytics (VWAP, volatility) in a state store. Ships five reproducible failure lessons — a broker down, a poison pill reaching the DLT, a consumer rebalance, an exactly-once race, and a dead stream engine behind a live process — each measuring what actually happens instead of asserting it. Includes a read-only Angular dashboard that explains the pipeline visually: seven Prometheus panels, live ticks and alerts over WebSocket, and lag, offsets and partition health over a deliberately closed metrics catalog, so the page observes and explains rather than querying freely.",
-                    url: undefined,
-                    status: "in-progress",
+                        "Event-driven market data pipeline built twice, in Spring Boot and Quarkus, both writing the same topics so their behaviour can be compared side by side. Covers the whole path: ingestion, schema-validated normalization, poison-pill handling with dead-letter and retry topics, transactional producers for exactly-once semantics, and windowed analytics (VWAP, volatility) in a state store. Ships five reproducible failure lessons: a broker down, a poison pill reaching the DLT, a consumer rebalance, an exactly-once race, and a dead stream engine behind a live process — each measuring what actually happens instead of asserting it. Includes a read-only Angular dashboard that explains the pipeline visually: seven Prometheus panels, live ticks and alerts over WebSocket, and lag, offsets and partition health over a deliberately closed metrics catalog, so the page observes and explains rather than querying freely.",
+                    url: "https://github.com/GodNoden/aggora",
+                    status: undefined,
                 },
             ]
         },
@@ -145,7 +145,7 @@ export const translations = {
                     description:
                         "Production-shaped streaming platform for global market data, built twice (Spring Boot and Quarkus) to exercise Kafka's core and advanced concepts: deliberate partitioning, exactly-once semantics, Kafka Streams windowing and joins, Schema Registry evolution, transactional outbox, and multi-broker failure behavior.",
                     targetDate: "Q2 2027",
-                    status: "in-progress",
+                    status: "Completed",
                 },
             ],
             targetCertifications: [
@@ -274,11 +274,11 @@ export const translations = {
                 },
                 {
                     name: "Aggora — Pipeline de eventos Kafka para datos de mercado",
-                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Avro · Schema Registry · Prometheus · Docker · Angular",
+                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Prometheus · Docker",
                     description:
-                        "Pipeline de datos de mercado orientado a eventos, construido dos veces —en Spring Boot y en Quarkus— escribiendo ambos los mismos topics para poder comparar su comportamiento lado a lado. Cubre el camino completo: ingesta, normalización validada contra el esquema, manejo de mensajes envenenados con topics de descarte y reintento, productores transaccionales para semántica exactly-once, y analítica por ventanas (VWAP, volatilidad) en un state store. Incluye cinco lecciones de fallo reproducibles —un broker caído, un mensaje envenenado llegando al DLT, un rebalanceo de consumidores, una carrera de exactly-once y un motor de streams muerto con el proceso vivo— midiendo en cada una lo que realmente pasa en vez de afirmarlo. Suma un dashboard Angular de solo lectura que explica el pipeline visualmente: siete paneles de Prometheus, ticks y alertas en vivo por WebSocket, y lag, offsets y salud de particiones a través de un catálogo de métricas deliberadamente cerrado, para que la página observe y explique en lugar de consultar libremente.",
-                    url: undefined,
-                    status: "in-progress",
+                        "Pipeline de datos de mercado orientado a eventos, construido dos veces, una en Spring Boot y en Quarkus, escribiendo ambos los mismos topics para poder comparar su comportamiento lado a lado. Cubre el camino completo: ingesta, normalización validada contra el esquema, manejo de mensajes envenenados con topics de descarte y reintento, productores transaccionales para semántica exactly-once, y analítica por ventanas en un state store. Incluye cinco lecciones de fallo reproducibles —un broker caído, un mensaje envenenado llegando al DLT, un rebalanceo de consumidores, una carrera de exactly-once y un motor de streams muerto con el proceso vivo— midiendo en cada una lo que realmente pasa en vez de afirmarlo. Suma un dashboard Angular de solo lectura que explica el pipeline visualmente: siete paneles de Prometheus, ticks y alertas en vivo por WebSocket, y lag, offsets y salud de particiones a través de un catálogo de métricas deliberadamente cerrado, para que la página observe y explique en lugar de consultar libremente.",
+                    url: "https://github.com/GodNoden/aggora",
+                    status: undefined,
                 },
             ]
         },
@@ -322,7 +322,7 @@ export const translations = {
                     description:
                         "Plataforma de streaming con forma de producción para datos de mercados globales, construida dos veces (Spring Boot y Quarkus) para ejercitar conceptos core y avanzados de Kafka: particionamiento deliberado, semántica exactly-once, windowing y joins en Kafka Streams, evolución de esquemas con Schema Registry, transactional outbox y comportamiento ante fallo de múltiples brokers.",
                     targetDate: "Q2 2027",
-                    status: "in-progress",
+                    status: "Completado",
                 },
             ],
             targetCertifications: [
@@ -451,11 +451,11 @@ export const translations = {
                 },
                 {
                     name: "Aggora — Pipeline d'événements Kafka pour données de marché",
-                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Avro · Schema Registry · Prometheus · Docker · Angular",
+                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Prometheus · Docker",
                     description:
-                        "Pipeline de données de marché orienté événements, construit deux fois —en Spring Boot et en Quarkus— les deux écrivant les mêmes topics afin de pouvoir comparer leur comportement côte à côte. Couvre tout le chemin : ingestion, normalisation validée par le schéma, gestion des messages empoisonnés avec topics de rebut et de reprise, producteurs transactionnels pour une sémantique exactly-once, et analytique par fenêtres (VWAP, volatilité) dans un state store. Livre cinq leçons de panne reproductibles —un broker arrêté, un message empoisonné arrivant au DLT, un rééquilibrage de consommateurs, une course exactly-once et un moteur de streams mort derrière un processus vivant— en mesurant à chaque fois ce qui se passe réellement au lieu de l'affirmer. Comprend un dashboard Angular en lecture seule qui explique le pipeline visuellement : sept panneaux Prometheus, ticks et alertes en direct par WebSocket, et lag, offsets et santé des partitions via un catalogue de métriques volontairement fermé, pour que la page observe et explique plutôt que d'interroger librement.",
-                    url: undefined,
-                    status: "in-progress",
+                        "Pipeline de données de marché orienté événements, construit deux fois, une en Spring Boot et aussi en Quarkus, les deux écrivant les mêmes topics afin de pouvoir comparer leur comportement côte à côte. Couvre tout le chemin : ingestion, normalisation validée par le schéma, gestion des messages empoisonnés avec topics de rebut et de reprise, producteurs transactionnels pour une sémantique exactly-once, et analytique par fenêtres dans un state store. Livre cinq leçons de panne reproductibles, un broker arrêté, un message empoisonné arrivant au DLT, un rééquilibrage de consommateurs, une course exactly-once et un moteur de streams mort derrière un processus vivant, en mesurant à chaque fois ce qui se passe réellement au lieu de l'affirmer. Comprend un dashboard Angular en lecture seule qui explique le pipeline visuellement : sept panneaux Prometheus, ticks et alertes en direct par WebSocket, et lag, offsets et santé des partitions via un catalogue de métriques volontairement fermé, pour que la page observe et explique plutôt que d'interroger librement.",
+                    url: "https://github.com/GodNoden/aggora",
+                    status: "Completed",
                 },
             ]
         },
@@ -499,7 +499,7 @@ export const translations = {
                     description:
                         "Plateforme de streaming aux allures de production pour les données de marchés mondiaux, construite deux fois (Spring Boot et Quarkus) afin d'exercer les concepts essentiels et avancés de Kafka : partitionnement délibéré, sémantique exactly-once, windowing et jointures dans Kafka Streams, évolution de schémas via Schema Registry, transactional outbox et comportement face à la défaillance de plusieurs brokers.",
                     targetDate: "T2 2027",
-                    status: "in-progress",
+                    status: "Terminé",
                 },
             ],
             targetCertifications: [
