@@ -1,12 +1,16 @@
 export type StackCategory = {
-    id: 'languages' | 'frameworks' | 'cloud' | 'databases' | 'architecture' | 'testing'
+    id: 'languages' | 'frameworks' | 'cloud' | 'databases' | 'architecture' | 'testing' | 'tools'
     items: string[]
 }
 
+/**
+ * Canonical technical skills. The portfolio section, the generated CVs and any
+ * future output all read from this list, so a skill is declared exactly once.
+ */
 export const stackCategories: StackCategory[] = [
     {
         id: 'languages',
-        items: ["Java", "SQL", "PHP", "TypeScript"],
+        items: ["Java", "SQL", "PHP", "TypeScript", "Bash"],
     },
     {
         id: 'frameworks',
@@ -16,6 +20,7 @@ export const stackCategories: StackCategory[] = [
         id: 'cloud',
         items: [
             "AWS (Lambda, API Gateway, CloudFormation, S3, Cognito, CloudWatch, IAM)",
+            "Azure",
             "Docker",
             "CI/CD (GitHub Actions)",
             "Linux",
@@ -39,5 +44,9 @@ export const stackCategories: StackCategory[] = [
     {
         id: 'testing',
         items: ["JUnit", "PHPUnit"],
+    },
+    {
+        id: 'tools',
+        items: ["Git", "Jira", "Postman"],
     },
 ]

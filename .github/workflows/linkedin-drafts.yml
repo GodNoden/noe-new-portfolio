@@ -1,0 +1,77 @@
+name: LinkedIn drafts
+
+# Weekly reminder to post something backed by real work. The workflow only ever
+# opens an issue with drafts — it never publishes to LinkedIn and needs no
+# secret beyond the default GITHUB_TOKEN.
+on:
+  schedule:
+    # Mondays at 14:00 UTC.
+    - cron: "0 14 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: linkedin-drafts
+  cancel-in-progress: false
+
+jobs:
+  drafts:
+    name: Generate LinkedIn drafts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout (full history)
+        uses: actions/checkout@v4
+        with:
+          # The generator reads `git log` for the last 7 days, so the full
+          # history has to be present (a shallow clone would hide the commits).
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate drafts
+        id: drafts
+        run: |
+          set -euo pipefail
+          draft_file="$(node scripts/linkedin-drafts.mjs)"
+          if [ ! -f "$draft_file" ]; then
+            echo "::error::The generator did not produce a draft file (got: ${draft_file})"
+            exit 1
+          fi
+          echo "path=${draft_file}" >> "$GITHUB_OUTPUT"
+          echo "Generated drafts: ${draft_file}"
+
+      - name: Create issue with drafts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRAFT_FILE: ${{ steps.drafts.outputs.path }}
+        run: |
+          set -euo pipefail
+          title="LinkedIn drafts — $(date -u +%Y-%m-%d)"
+
+          # `--search` is only a coarse pre-filter; `grep -Fxq` makes the match
+          # exact so a re-run on the same UTC day cannot open a duplicate issue.
+          existing="$(
+            gh issue list \
+              --state open \
+              --limit 100 \
+              --search "LinkedIn drafts in:title" \
+              --json title \
+              --jq '.[].title'
+          )"
+
+          if printf '%s\n' "$existing" | grep -Fxq "$title"; then
+            echo "An open issue titled \"${title}\" already exists — skipping creation."
+            exit 0
+          fi
+
+          gh issue create \
+            --title "$title" \
+            --body-file "$DRAFT_FILE"
+          echo "Created issue: ${title}"

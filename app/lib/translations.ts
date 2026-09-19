@@ -1,3 +1,6 @@
+import { roadmapStatus } from "./status";
+import type { ProjectItem } from "./content";
+
 const experienceMeta = {
     tekchoice: {
         role: "Backend Developer",
@@ -85,7 +88,7 @@ export const translations = {
                     description:
                         "A personal blog platform where I can create and share my thoughts. Built with NextJS for the frontend and C# with ASP.NET Core for the backend, using MySQL as the database. Developed using Docker for containerization and deployed on Google Cloud Platform.",
                     url: undefined,
-                    status: "in-progress",
+                    status: roadmapStatus.inProgress,
                 },
                 {
                     name: "My Portfolio",
@@ -103,7 +106,7 @@ export const translations = {
                     url: "https://github.com/GodNoden/aggora",
                     status: undefined,
                 },
-            ]
+            ] satisfies ProjectItem[]
         },
         stack: {
             title: "Tech Stack",
@@ -113,7 +116,8 @@ export const translations = {
                 cloud: "Cloud & DevOps",
                 databases: "Databases",
                 architecture: "Architecture & Patterns",
-                testing: "Testing libraries"
+                testing: "Testing libraries",
+                tools: "Tools"
             },
         },
         contact: {
@@ -145,7 +149,7 @@ export const translations = {
                     description:
                         "Production-shaped streaming platform for global market data, built twice (Spring Boot and Quarkus) to exercise Kafka's core and advanced concepts: deliberate partitioning, exactly-once semantics, Kafka Streams windowing and joins, Schema Registry evolution, transactional outbox, and multi-broker failure behavior.",
                     targetDate: "Q2 2027",
-                    status: "Completed",
+                    status: roadmapStatus.completed,
                 },
             ],
             targetCertifications: [
@@ -155,7 +159,7 @@ export const translations = {
                     description:
                         "Foundational AWS certification covering core services, billing, security, and the shared responsibility model.",
                     targetDate: "Q4 2026",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://aws.amazon.com/certification/certified-cloud-practitioner/",
                 },
                 {
@@ -164,7 +168,7 @@ export const translations = {
                     description:
                         "Deploying, monitoring, and maintaining GCP projects and services. Complements the AWS foundation with a second cloud provider.",
                     targetDate: "Q1 2027",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://cloud.google.com/certification/cloud-engineer",
                 },
                 {
@@ -173,7 +177,7 @@ export const translations = {
                     description:
                         "Advanced English certification with lifetime validity. Formal proof of professional working proficiency.",
                     targetDate: "Q2 2027",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://www.cambridgeenglish.org/exams-and-tests/advanced/",
                 },
                 {
@@ -182,7 +186,7 @@ export const translations = {
                     description:
                         "Self-paced certification covering financial markets, currencies, fixed income, and equities. Builds the domain vocabulary for working on financial systems.",
                     targetDate: "Q3 2027",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://www.bloomberg.com/professional/product/bloomberg-market-concepts/",
                 },
             ],
@@ -262,7 +266,7 @@ export const translations = {
                     description:
                         "Una plataforma de blog personal donde puedo crear y compartir mis pensamientos. Construida con NextJS para el frontend y C# con ASP.NET Core para el backend, utilizando MySQL como base de datos. Desarrollada usando Docker para la contenedorización y desplegada en Google Cloud Platform.",
                     url: undefined,
-                    status: "in-progress",
+                    status: roadmapStatus.inProgress,
                 },
                 {
                     name: "Mi Portafolio",
@@ -280,7 +284,7 @@ export const translations = {
                     url: "https://github.com/GodNoden/aggora",
                     status: undefined,
                 },
-            ]
+            ] satisfies ProjectItem[]
         },
         stack: {
             title: "Stack Tecnológico",
@@ -290,7 +294,8 @@ export const translations = {
                 cloud: "Cloud y DevOps",
                 databases: "Bases de datos",
                 architecture: "Arquitectura y patrones",
-                testing: "Librerías de testing"
+                testing: "Librerías de testing",
+                tools: "Herramientas"
             },
         },
         contact: {
@@ -322,7 +327,7 @@ export const translations = {
                     description:
                         "Plataforma de streaming con forma de producción para datos de mercados globales, construida dos veces (Spring Boot y Quarkus) para ejercitar conceptos core y avanzados de Kafka: particionamiento deliberado, semántica exactly-once, windowing y joins en Kafka Streams, evolución de esquemas con Schema Registry, transactional outbox y comportamiento ante fallo de múltiples brokers.",
                     targetDate: "Q2 2027",
-                    status: "Completado",
+                    status: roadmapStatus.completed,
                 },
             ],
             targetCertifications: [
@@ -332,7 +337,7 @@ export const translations = {
                     description:
                         "Certificación foundational de AWS que cubre servicios core, facturación, seguridad y el modelo de responsabilidad compartida.",
                     targetDate: "Q4 2026",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://aws.amazon.com/es/certification/certified-cloud-practitioner/",
                 },
                 {
@@ -341,7 +346,7 @@ export const translations = {
                     description:
                         "Despliegue, monitoreo y mantenimiento de proyectos y servicios en GCP. Complementa la base de AWS con un segundo proveedor cloud.",
                     targetDate: "Q1 2027",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://cloud.google.com/certification/cloud-engineer?hl=es",
                 },
                 {
@@ -350,7 +355,7 @@ export const translations = {
                     description:
                         "Certificación avanzada de inglés con validez de por vida. Prueba formal de dominio profesional del idioma.",
                     targetDate: "Q2 2027",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://www.cambridgeenglish.org/exams-and-tests/advanced/",
                 },
                 {
@@ -359,7 +364,7 @@ export const translations = {
                     description:
                         "Certificación autopaced que cubre mercados financieros, divisas, renta fija y renta variable. Construye el vocabulario de dominio para trabajar en sistemas financieros.",
                     targetDate: "Q3 2027",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://www.bloomberg.com/professional/product/bloomberg-market-concepts/",
                 },
             ],
@@ -395,7 +400,7 @@ export const translations = {
                     ...experienceMeta.dxc,
                     dates: "· Sept 2023 - Juin 2024",
                     description:
-                        "Développement et maintenance de services backend en Java et Spring Boot pour Grupo Bimbo (BMV: BIMBO). J'ai contribué à de la modernisation d'un système legacy de catalogue et d'inventaire, exposant de nouvelles capacités via des APIs REST bien définies suivant une architecture en couches Controller–Service–Repository.",
+                        "Développement et maintenance de services backend en Java et Spring Boot pour Grupo Bimbo (BMV: BIMBO). J'ai contribué à la modernisation d'un système legacy de catalogue et d'inventaire, exposant de nouvelles capacités via des APIs REST bien définies suivant une architecture en couches Controller–Service–Repository.",
                 },
                 {
                     ...experienceMeta.folio3,
@@ -439,7 +444,7 @@ export const translations = {
                     description:
                         "Une plateforme de blog personnel où je peux créer et partager mes pensées. Construite avec NextJS pour le frontend et C# avec ASP.NET Core pour le backend, en utilisant MySQL comme base de données. Développée en utilisant Docker pour la conteneurisation et déployée sur Google Cloud Platform.",
                     url: undefined,
-                    status: "in-progress",
+                    status: roadmapStatus.inProgress,
                 },
                 {
                     name: "Mon Portfolio",
@@ -455,9 +460,9 @@ export const translations = {
                     description:
                         "Pipeline de données de marché orienté événements, construit deux fois, une en Spring Boot et aussi en Quarkus, les deux écrivant les mêmes topics afin de pouvoir comparer leur comportement côte à côte. Couvre tout le chemin : ingestion, normalisation validée par le schéma, gestion des messages empoisonnés avec topics de rebut et de reprise, producteurs transactionnels pour une sémantique exactly-once, et analytique par fenêtres dans un state store. Livre cinq leçons de panne reproductibles, un broker arrêté, un message empoisonné arrivant au DLT, un rééquilibrage de consommateurs, une course exactly-once et un moteur de streams mort derrière un processus vivant, en mesurant à chaque fois ce qui se passe réellement au lieu de l'affirmer. Comprend un dashboard Angular en lecture seule qui explique le pipeline visuellement : sept panneaux Prometheus, ticks et alertes en direct par WebSocket, et lag, offsets et santé des partitions via un catalogue de métriques volontairement fermé, pour que la page observe et explique plutôt que d'interroger librement.",
                     url: "https://github.com/GodNoden/aggora",
-                    status: "Completed",
+                    status: roadmapStatus.completed,
                 },
-            ]
+            ] satisfies ProjectItem[]
         },
         stack: {
             title: "Stack Technique",
@@ -467,7 +472,8 @@ export const translations = {
                 cloud: "Cloud et DevOps",
                 databases: "Bases de données",
                 architecture: "Architecture et patterns",
-                testing: "Bibliothèques de tests"
+                testing: "Bibliothèques de tests",
+                tools: "Outils"
             },
         },
         contact: {
@@ -499,7 +505,7 @@ export const translations = {
                     description:
                         "Plateforme de streaming aux allures de production pour les données de marchés mondiaux, construite deux fois (Spring Boot et Quarkus) afin d'exercer les concepts essentiels et avancés de Kafka : partitionnement délibéré, sémantique exactly-once, windowing et jointures dans Kafka Streams, évolution de schémas via Schema Registry, transactional outbox et comportement face à la défaillance de plusieurs brokers.",
                     targetDate: "T2 2027",
-                    status: "Terminé",
+                    status: roadmapStatus.completed,
                 },
             ],
             targetCertifications: [
@@ -509,7 +515,7 @@ export const translations = {
                     description:
                         "Certification foundational AWS couvrant les services essentiels, la facturation, la sécurité et le modèle de responsabilité partagée.",
                     targetDate: "T4 2026",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://aws.amazon.com/fr/certification/certified-cloud-practitioner/",
                 },
                 {
@@ -518,7 +524,7 @@ export const translations = {
                     description:
                         "Déploiement, surveillance et maintenance de projets et services GCP. Complète la base AWS avec un second fournisseur cloud.",
                     targetDate: "T1 2027",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://cloud.google.com/certification/cloud-engineer?hl=fr",
                 },
                 {
@@ -527,7 +533,7 @@ export const translations = {
                     description:
                         "Certification d'anglais avancée à validité permanente. Preuve formelle de maîtrise professionnelle de la langue.",
                     targetDate: "T2 2027",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://www.cambridgeenglish.org/exams-and-tests/advanced/",
                 },
                 {
@@ -536,7 +542,7 @@ export const translations = {
                     description:
                         "Certification auto-rythmée couvrant les marchés financiers, les devises, les taux fixes et les actions. Construit le vocabulaire métier pour travailler sur des systèmes financiers.",
                     targetDate: "T3 2027",
-                    status: "planned",
+                    status: roadmapStatus.planned,
                     url: "https://www.bloomberg.com/professional/product/bloomberg-market-concepts/",
                 },
             ],

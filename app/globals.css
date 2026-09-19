@@ -89,3 +89,49 @@
     color 20ms ease-in-out,
     border-color 100ms ease-in-out;
 }
+
+/* ---------------------------------------------------------------------------
+   Print view for the generated résumés (app/cv/[lang]).
+   The generated PDF must be ink-friendly and theme-independent, so print always
+   forces light colours. `body > header` targets only the site chrome, never a
+   section heading inside the document itself.
+--------------------------------------------------------------------------- */
+@media print {
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  body > header {
+    display: none !important;
+  }
+
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .cv-page {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    max-width: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+}
+
+.cv-page {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
