@@ -41,7 +41,7 @@ export const translations = {
                     ...experienceMeta.dxc,
                     dates: "· Sep 2023 - Jun 2024",
                     description:
-                        "Built and maintained backend services in Java and Spring Boot for Grupo Bimbo (NYSE: BIMBO). Led the modernization of a legacy catalog and inventory system, exposing new capabilities through well-defined REST APIs following a layered Controller–Service–Repository architecture.",
+                        "Built and maintained backend services in Java and Spring Boot for Grupo Bimbo (NYSE: BIMBO). Contributed to the modernization of a legacy catalog and inventory system, exposing new capabilities through well-defined REST APIs following a layered Controller–Service–Repository architecture.",
                 },
                 {
                     ...experienceMeta.folio3,
@@ -218,7 +218,7 @@ export const translations = {
                     ...experienceMeta.dxc,
                     dates: "· Sep 2023 - Jun 2024",
                     description:
-                        "Desarrollé y mantuve servicios backend en Java y Spring Boot para Grupo Bimbo (NYSE: BIMBO). Lideré la modernización de un sistema legacy de catálogo e inventario, exponiendo nuevas capacidades a través de APIs REST bien definidas siguiendo una arquitectura en capas Controller–Service–Repository.",
+                        "Desarrollé y mantuve servicios backend en Java y Spring Boot para Grupo Bimbo (BMV: BIMBO). Contribuí a la modernización de un sistema legacy de catálogo e inventario, exponiendo nuevas capacidades a través de APIs REST bien definidas siguiendo una arquitectura en capas Controller–Service–Repository.",
                 },
                 {
                     ...experienceMeta.folio3,
@@ -395,7 +395,7 @@ export const translations = {
                     ...experienceMeta.dxc,
                     dates: "· Sept 2023 - Juin 2024",
                     description:
-                        "Développement et maintenance de services backend en Java et Spring Boot pour Grupo Bimbo (NYSE: BIMBO). Pilotage de la modernisation d'un système legacy de catalogue et d'inventaire, exposant de nouvelles capacités via des APIs REST bien définies suivant une architecture en couches Controller–Service–Repository.",
+                        "Développement et maintenance de services backend en Java et Spring Boot pour Grupo Bimbo (BMV: BIMBO). J'ai contribué à de la modernisation d'un système legacy de catalogue et d'inventaire, exposant de nouvelles capacités via des APIs REST bien définies suivant une architecture en couches Controller–Service–Repository.",
                 },
                 {
                     ...experienceMeta.folio3,
