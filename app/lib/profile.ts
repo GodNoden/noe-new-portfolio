@@ -71,7 +71,7 @@ type CvCopy = {
 
 const cvCopy: Record<Language, CvCopy> = {
     en: {
-        jobTitle: 'Backend Developer',
+        jobTitle: 'Backend Engineer',
         labels: {
             summary: 'Professional Summary',
             skills: 'Technical Skills',
@@ -81,10 +81,10 @@ const cvCopy: Record<Language, CvCopy> = {
             languages: 'Languages',
         },
         summary:
-            'Backend Developer with 4+ years of experience designing and maintaining scalable APIs and services with Java and Spring Boot. Experienced in SQL databases, serverless architecture, and AWS deployment.',
+            'Backend Engineer with 4+ years of experience designing and maintaining scalable APIs and services with Java and Spring Boot. Experienced in SQL databases, serverless architecture, and AWS deployment.',
         roles: {
-            tekchoice: 'Backend Developer',
-            dxc: 'Backend Developer Jr.',
+            tekchoice: 'Backend Engineer',
+            dxc: 'Backend Engineer Jr.',
             folio3: 'Software Developer Jr.',
         },
         achievements: {
@@ -117,7 +117,7 @@ const cvCopy: Record<Language, CvCopy> = {
         ],
     },
     es: {
-        jobTitle: 'Backend Developer',
+        jobTitle: 'Backend Engineer',
         labels: {
             summary: 'Resumen Profesional',
             skills: 'Habilidades Técnicas',
@@ -127,10 +127,10 @@ const cvCopy: Record<Language, CvCopy> = {
             languages: 'Idiomas',
         },
         summary:
-            'Backend Developer con 4+ años de experiencia diseñando y manteniendo APIs y servicios escalables con Java y Spring Boot. Experiencia en bases de datos SQL, arquitecturas serverless y despliegue en AWS.',
+            'Backend Engineer con 4+ años de experiencia diseñando y manteniendo APIs y servicios escalables con Java y Spring Boot. Experiencia en bases de datos SQL, arquitecturas serverless y despliegue en AWS.',
         roles: {
-            tekchoice: 'Backend Developer',
-            dxc: 'Backend Developer Jr.',
+            tekchoice: 'Backend Engineer',
+            dxc: 'Backend Engineer Jr.',
             folio3: 'Software Developer Jr.',
         },
         achievements: {
@@ -163,7 +163,7 @@ const cvCopy: Record<Language, CvCopy> = {
         ],
     },
     fr: {
-        jobTitle: 'Développeur Back',
+        jobTitle: 'Ingénieur Backend',
         labels: {
             summary: 'Résumé Professionnel',
             skills: 'Compétences Techniques',
@@ -173,10 +173,10 @@ const cvCopy: Record<Language, CvCopy> = {
             languages: 'Langues',
         },
         summary:
-            "Développeur Back avec 4+ ans d'expérience dans la conception et la maintenance d'API et de services évolutifs avec Java et Spring Boot. Expérience en bases de données SQL, architecture serverless et déploiement sur AWS.",
+            "Ingénieur Backend avec 4+ ans d'expérience dans la conception et la maintenance d'API et de services évolutifs avec Java et Spring Boot. Expérience en bases de données SQL, architecture serverless et déploiement sur AWS.",
         roles: {
-            tekchoice: 'Développeur Back',
-            dxc: 'Développeur Back Jr.',
+            tekchoice: 'Ingénieur Backend',
+            dxc: 'Ingénieur Backend Jr.',
             folio3: 'Développeur de Logiciels Jr.',
         },
         achievements: {

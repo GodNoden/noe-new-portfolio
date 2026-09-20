@@ -11,12 +11,12 @@ Extraído del PDF que exportaste. Esto es literalmente lo que ve un reclutador:
 | Campo | Contenido actual |
 |---|---|
 | Nombre | Noe **Ixmak** Quezada |
-| Titular | Backend Developer \| Java · Spring Boot · AWS Lambda \| REST APIs & Serverless Architecture |
+| Titular | Backend **Developer** \| Java · Spring Boot · AWS Lambda \| REST APIs & Serverless Architecture → **cambiar a "Backend Engineer"** |
 | Ubicación | Guadalajara, Jalisco, Mexico |
 | Contacto | quezadanoe@gmail.com · +52 6241751162 (móvil) |
 | URL | www.linkedin.com/in/noe-ixmak-quezada |
 | Aptitudes fijadas | **Ya corregidas**: Java · Spring Boot · Amazon Web Services (AWS) · Docker · Scrum (antes tenías TypeScript · Internacionalización · Tailwind CSS v4) |
-| Experiencia | TekChoice LLC — Backend Engineer (Jun 2024 – Presente, 2 años 4 meses) · DXC Technology — Backend Engineer Jr. (Sep 2023 – Jun 2024, 10 meses) · Folio3 Software — Software Engineer Jr. (Jul 2022 – Mar 2023, 9 meses) |
+| Experiencia | TekChoice LLC — Backend Engineer (Jun 2024 – Presente, 2 años 4 meses) · DXC Technology — Backend Engineer Jr. (Sep 2023 – Jun 2024, 10 meses) · Folio3 Software — Software **Engineer** Jr. ← **debe decir "Software Developer Jr."** (Jul 2022 – Mar 2023, 9 meses) |
 | Educación | Universidad de Guadalajara — **Ciclo Formativo de Grado Superior, Ciencias de la computación · (2018 – 2021)** |
 | Resumen | Existe, ~5 líneas. Sin una sola métrica y sin mencionar ningún proyecto |
 | Destacados · Proyectos · Certificaciones · Idiomas | **No aparecen en el PDF: están vacíos** |
@@ -78,7 +78,7 @@ Y asegúrate de que la sección **Educación** de LinkedIn quede como una sola e
 | Email | quezadanoe@gmail.com |
 | Educación | Ingeniería en Sistemas Computacionales, 2018–2023, Universidad de Guadalajara, CUCEI **(confirmado por ti; es LinkedIn el que está mal)** |
 | Idiomas | Español nativo, Inglés B2, Francés B1 |
-| Posicionamiento | "Backend Developer con 4+ años de experiencia" |
+| Posicionamiento | "Backend Engineer con 4+ años de experiencia" |
 
 > Regla de oro del documento: **no se inventa nada**. Todo lo que aparece aquí sale de tu experiencia, tus proyectos y tu stack reales. Si un número no está en tus datos, no se escribe.
 
@@ -108,11 +108,11 @@ Confirmaste que tu titulación real es **Ingeniería en Sistemas Computacionales
 
 **Acción:** sustituye la entrada de educación de LinkedIn. Es corto de hacer, pero es lo que más riesgo tiene en una verificación de antecedentes: hoy tu perfil declara dos años menos de estudios y una titulación distinta a la de tu CV.
 
-### 4. Experiencia: unifica cargos y fechas, y pasa a bullets de resultado — 45 minutos
+### 4. Experiencia: unifica las fechas de Folio3 y pasa a bullets de resultado — 45 minutos
 
-Son dos problemas distintos. Primero, coherencia: LinkedIn dice "Engineer" donde el CV dice "Developer", y las fechas de Folio3 no coinciden (#3, #4 y #5 de la tabla). Segundo, tus bullets describen responsabilidades en lugar de resultados.
+Tu cargo actual y el de DXC ya coinciden en los tres sitios: **Backend Engineer** y **Backend Engineer Jr.** Falta un detalle en Folio3, donde LinkedIn dice **"Software Engineer Jr."** y debe decir **"Software Developer Jr."**: ese puesto era de desarrollo, no de ingeniería, y además fue antes de que te graduaras. Aparte queda cuadrar las fechas de Folio3, que no coinciden (LinkedIn Jul 2022 – Mar 2023 frente a CV Ago 2022 – Abr 2023), y reescribir los bullets para que hablen de resultados y no de responsabilidades.
 
-**Acción:** usa los bullets de la sección 6, con **"Contributed to"** / **"Contribuí a"** como verbo honesto, y unifica el cargo.
+**Acción:** usa los bullets de la sección 6, con **"Contributed to"** / **"Contribuí a"** como verbo honesto, corrige el cargo de Folio3 en LinkedIn y cuadra esas fechas en los tres sitios.
 
 ### 5. Acerca de (About): ya existe, pero no tiene ni una métrica — 30 minutos
 
@@ -139,7 +139,7 @@ Estos son hechos verificados y cada uno tiene una corrección concreta. Hazlas e
 | # | Problema detectado | Acción exacta |
 |---|---|---|
 | 1 | El CV en francés enlazaba `linkedin.com/in/noe-ixmal-quezada` (con **L**, no **K**) → enlace roto | ✅ **Ya cerrado por construcción.** Los 3 CVs se generan desde `app/lib/profile.ts` y la URL sale de `app/lib/site.ts`, así que la errata no puede volver |
-| 2 | Cargo distinto en LinkedIn ("Engineer"), CV y portfolio ("Developer") | Unificar a **Backend Developer** en los tres sitios. Es el que coincide con tu experiencia real y con tu titular de LinkedIn |
+| 2 | Cargos distintos entre LinkedIn, CV y portfolio | ⚠️ **Casi cerrado.** CVs y portfolio ya dicen **Backend Engineer** (TekChoice), **Backend Engineer Jr.** (DXC) y **Software Developer Jr.** (Folio3). LinkedIn coincide en los dos primeros, pero en Folio3 pone **"Software Engineer Jr."** y hay que cambiarlo. Y falta cambiar la primera palabra de tu titular: `Developer` → `Engineer` |
 | 3 | Portfolio EN: "Led the modernization" (DXC) vs CV ES: "Contribuí a la modernización" | ✅ **Ya cerrado.** El texto en inglés ya decía "Contributed to"; se corrigió además un error de gramática francesa ("à de la modernisation" → "à la modernisation"). El "Led" que se ve hoy en ixmak.com es del sitio sin desplegar |
 | 4 | Stack divergente: el CV listaba Azure, Bash, Git, Jira y Postman y el portfolio no | ✅ **Ya unificado del lado del código.** Bash, Azure, Git, Jira y Postman están ahora en `app/lib/stack.ts`, que alimenta a la vez el portfolio y los 3 CVs |
 | 5 | Los 3 CVs no incluían BMV, Kapital ni Aggora | ✅ **Ya corregido.** Los CVs se generan desde los datos del portfolio y ya los incluyen. Falta publicarlos en Destacados (sección 5) |
@@ -174,7 +174,7 @@ Estos son hechos verificados y cada uno tiene una corrección concreta. Hazlas e
 Línea 1 (grande, izquierda-arriba):
 
 ```text
-Backend Developer · Java & Spring Boot · AWS Serverless
+Backend Engineer · Java & Spring Boot · AWS Serverless
 ```
 
 Línea 2 (más pequeña, debajo de la primera):
@@ -187,19 +187,19 @@ Paleta sugerida: fondo oscuro (#0B1220 o similar) con texto blanco y **un** colo
 
 ### Por qué importa
 
-La foto y el banner son el 100% de la impresión en la lista de resultados de búsqueda junto con el titular. Un banner con "Backend Developer · Java & Spring Boot · AWS Serverless" comunica el rol antes de que el reclutador lea una sola palabra del About. El banner cuesta 20 minutos y trabaja en cada visita al perfil.
+La foto y el banner son el 100% de la impresión en la lista de resultados de búsqueda junto con el titular. Un banner con "Backend Engineer · Java & Spring Boot · AWS Serverless" comunica el rol antes de que el reclutador lea una sola palabra del About. El banner cuesta 20 minutos y trabaja en cada visita al perfil.
 
 ---
 
 ## 3. Titular / Headline
 
-> **Tu titular actual ya funciona.** Verificado en el PDF: `Backend Developer | Java · Spring Boot · AWS Lambda | REST APIs & Serverless Architecture` contiene las cuatro palabras clave que un reclutador escribe ("Java", "Spring Boot", "AWS", "Backend") más dos señales fuertes ("REST APIs", "Serverless"). Esta sección pasa a ser **opcional**: solo si quieres exprimir el campo con años de experiencia y modalidad, que hoy no aparecen.
+> **Tu titular ya tiene las palabras clave correctas, pero empieza con el cargo equivocado.** Verificado en el PDF: `Backend Developer | Java · Spring Boot · AWS Lambda | REST APIs & Serverless Architecture`. Contiene las cuatro palabras clave que un reclutador escribe ("Java", "Spring Boot", "AWS", "Backend") más dos señales fuertes ("REST APIs", "Serverless"), así que **no hace falta reescribirlo**: basta cambiar la primera palabra, `Developer` → `Engineer`, para que coincida con tu cargo real en la sección Experiencia.
 
 ### Qué hacer
 
 - Límite duro: **220 caracteres**. Las 3 variantes de abajo están por debajo.
 - Estructura que funciona: **Cargo | Tecnologías núcleo | Evidencia o años | Ubicación/Modalidad**.
-- Usa el cargo unificado: **Backend Developer** (no "Backend Engineer").
+- Usa el cargo unificado: **Backend Engineer** (nunca "Backend Developer").
 - No uses frases vacías: "apasionado por la tecnología", "soñador", "buscando nuevas oportunidades" no aportan nada y no se buscan.
 - Recuerda: LinkedIn indexa este campo. "Java", "Spring Boot", "AWS" y "Remoto" deben aparecer literalmente.
 
@@ -208,19 +208,19 @@ La foto y el banner son el 100% de la impresión en la lista de resultados de b�
 Variante A:
 
 ```text
-Backend Developer | Java · Spring Boot · AWS Serverless | 4+ años construyendo APIs REST y microservicios | Guadalajara, MX | Abierto a remoto y reubicación
+Backend Engineer | Java · Spring Boot · AWS Serverless | 4+ años construyendo APIs REST y microservicios | Guadalajara, MX | Abierto a remoto y reubicación
 ```
 
 Variante B:
 
 ```text
-Backend Developer | Java, Spring Boot, AWS (Lambda, API Gateway, CloudFormation, CloudWatch) | APIs REST y microservicios | 4+ años | Remoto
+Backend Engineer | Java, Spring Boot, AWS (Lambda, API Gateway, CloudFormation, CloudWatch) | APIs REST y microservicios | 4+ años | Remoto
 ```
 
 Variante C:
 
 ```text
-Backend Developer con 4+ años en Java y Spring Boot | AWS serverless (Lambda, CloudFormation) | APIs REST, microservicios, Docker, PostgreSQL | Guadalajara, MX | Remoto
+Backend Engineer con 4+ años en Java y Spring Boot | AWS serverless (Lambda, CloudFormation) | APIs REST, microservicios, Docker, PostgreSQL | Guadalajara, MX | Remoto
 ```
 
 ### Variantes en inglés
@@ -228,19 +228,19 @@ Backend Developer con 4+ años en Java y Spring Boot | AWS serverless (Lambda, C
 Variante A:
 
 ```text
-Backend Developer | Java · Spring Boot · AWS Serverless | 4+ years building REST APIs & microservices | Guadalajara, MX | Open to remote & relocation
+Backend Engineer | Java · Spring Boot · AWS Serverless | 4+ years building REST APIs & microservices | Guadalajara, MX | Open to remote & relocation
 ```
 
 Variante B:
 
 ```text
-Backend Developer | Java, Spring Boot, AWS (Lambda, API Gateway, CloudFormation, CloudWatch) | REST APIs & microservices | 4+ years | Open to remote
+Backend Engineer | Java, Spring Boot, AWS (Lambda, API Gateway, CloudFormation, CloudWatch) | REST APIs & microservices | 4+ years | Open to remote
 ```
 
 Variante C:
 
 ```text
-Backend Developer with 4+ years in Java & Spring Boot | AWS serverless (Lambda, CloudFormation) | REST APIs, microservices, Docker, PostgreSQL | Guadalajara, MX | Remote
+Backend Engineer with 4+ years in Java & Spring Boot | AWS serverless (Lambda, CloudFormation) | REST APIs, microservices, Docker, PostgreSQL | Guadalajara, MX | Remote
 ```
 
 ### Cuál recomiendo
@@ -251,7 +251,7 @@ Si tu perfil está en inglés, usa la A en inglés. Si mantienes el perfil en es
 
 ### Por qué importa
 
-El titular se repite en cada invitación a conectar, cada comentario y cada resultado de búsqueda. Un titular con palabras clave correctas te mete en las búsquedas Boolean de los reclutadores; uno genérico te deja fuera antes de que alguien abra tu perfil. Y "Backend Developer" en lugar de "Backend Engineer" elimina la primera pregunta incómoda de la entrevista: ¿cuál es tu cargo real?
+El titular se repite en cada invitación a conectar, cada comentario y cada resultado de búsqueda. Un titular con palabras clave correctas te mete en las búsquedas Boolean de los reclutadores; uno genérico te deja fuera antes de que alguien abra tu perfil. Y usar "Backend Engineer" en lugar de "Backend Developer" elimina la primera pregunta incómoda de la entrevista: ¿cuál es tu cargo real?
 
 ---
 
@@ -301,7 +301,7 @@ quezadanoe@gmail.com · github.com/GodNoden · ixmak.com
 ### Versión en español
 
 ```text
-Backend Developer que entrega a producción — y puede mostrar los números.
+Backend Engineer que entrega a producción — y puede mostrar los números.
 
 Construyo backend en Java y Spring Boot, y servicios serverless en AWS. En los últimos 4+ años trabajé en el portal de autoservicio de una cooperativa de crédito de EE. UU., en el reemplazo de un sistema legacy de catálogo e inventario para Grupo Bimbo, y en una API REST para una plataforma de empresas reguladas por la FDA.
 
@@ -443,12 +443,24 @@ Varios estudios de reclutamiento coinciden en que los elementos multimedia del p
 - No repitas el título del puesto en el primer bullet. Usa el espacio para el logro.
 - **Verbo honesto en DXC**: "Contributed to / Contribuí a", nunca "Led / Lideré". Si quieres usar "Led", primero consigue que alguien lo confirme por escrito en una recomendación.
 
-### Puesto 1 — Backend Developer, Tekchoice LLC (Jun 2024 – Presente)
+### Por qué los tres cargos no usan la misma palabra
+
+Es deliberado, no un descuido, y conviene tener la respuesta lista porque un entrevistador puede preguntarlo:
+
+| Empleo | Cargo | Por qué |
+|---|---|---|
+| TekChoice LLC (2024–) | **Backend Engineer** | Tu puesto actual, ya graduado y con responsabilidad sobre servicios en producción |
+| DXC Technology (2023–2024) | **Backend Engineer Jr.** | Ya titulado, pero todavía en nivel junior |
+| Folio3 Software (2022–2023) | **Software Developer Jr.** | **Todavía no te habías graduado.** Además el trabajo era de desarrollo general, no específicamente de backend |
+
+La regla es sencilla: *Engineer* solo donde el título lo justifica; en el puesto previo a tu titulación, *Developer* es lo correcto y lo que un verificador de antecedentes va a poder confirmar.
+
+### Puesto 1 — Backend Engineer, Tekchoice LLC (Jun 2024 – Presente)
 
 Título del puesto en LinkedIn:
 
 ```text
-Backend Developer
+Backend Engineer
 ```
 
 Bullets en inglés:
@@ -467,12 +479,12 @@ Bullets en español:
 • Apliqué infraestructura como código con AWS CloudFormation y configuré alertas de monitoreo con CloudWatch, mejorando la observabilidad del portal.
 ```
 
-### Puesto 2 — Backend Developer Jr., DXC Technology Company (Sep 2023 – Jun 2024)
+### Puesto 2 — Backend Engineer Jr., DXC Technology Company (Sep 2023 – Jun 2024)
 
 Título del puesto en LinkedIn:
 
 ```text
-Backend Developer Jr.
+Backend Engineer Jr.
 ```
 
 Bullets en inglés:
@@ -898,7 +910,7 @@ Configura **Open to work** con la visibilidad **solo para reclutadores** ("Solo 
 Ruta: **Open to work → Buscar un nuevo empleo**, y llena:
 
 ```text
-Puesto: Backend Developer
+Puesto: Backend Engineer
 ```
 
 Puestos adicionales a agregar (máximo 5 en total):
@@ -933,7 +945,7 @@ Notas:
 
 ### Por qué importa
 
-"Open to work" es lo que te mete en la herramienta donde los reclutadores buscan por puesto, modalidad y ubicación. Configurado solo para reclutadores, obtienes el beneficio completo sin anunciar a tu empleador actual que estás buscando. Y "En remoto" + "Backend Developer" son exactamente los dos filtros que abren las vacantes que quieres: sin ellos, tu perfil puede ser perfecto y aun así no aparecer.
+"Open to work" es lo que te mete en la herramienta donde los reclutadores buscan por puesto, modalidad y ubicación. Configurado solo para reclutadores, obtienes el beneficio completo sin anunciar a tu empleador actual que estás buscando. Y "En remoto" + "Backend Engineer" son exactamente los dos filtros que abren las vacantes que quieres: sin ellos, tu perfil puede ser perfecto y aun así no aparecer.
 
 ---
 
@@ -945,13 +957,13 @@ Marca cada casilla al terminarla. El orden sugerido es el de arriba hacia abajo.
 
 - [ ] Foto cuadrada (mínimo 400×400, ideal 800×800), rostro centrado, fondo neutro
 - [ ] Misma foto en LinkedIn, GitHub y portfolio
-- [ ] Banner 1584×396 con "Backend Developer · Java & Spring Boot · AWS Serverless" y "github.com/GodNoden · ixmak.com"
+- [ ] Banner 1584×396 con "Backend Engineer · Java & Spring Boot · AWS Serverless" y "github.com/GodNoden · ixmak.com"
 - [ ] Banner legible en móvil (probado a 375 px de ancho)
 
 **Titular y About**
 
 - [ ] Titular con la Variante A recomendada, por debajo de 220 caracteres
-- [ ] Titular con el cargo unificado: **Backend Developer** (no "Backend Engineer")
+- [ ] Titular cambiado de "Backend Developer" a **Backend Engineer** (hoy tu titular todavía dice Developer)
 - [ ] Titular con "Java", "Spring Boot", "AWS" y modalidad visibles
 - [ ] About en EN pegado, ≤ 2.600 caracteres
 - [ ] About en ES pegado (si el perfil es bilingüe), ≤ 2.600 caracteres
@@ -1002,8 +1014,8 @@ Marca cada casilla al terminarla. El orden sugerido es el de arriba hacia abajo.
 - [ ] Sitios web en Información de contacto: ixmak.com y github.com/GodNoden
 - [ ] Enlace de LinkedIn corregido en los 3 CVs, el portfolio y la firma de email
 - [ ] **CV en francés corregido**: `noe-ixmal-quezada` → `noe-ixmak-quezada`
-- [ ] Cargo unificado a "Backend Developer" en CV, portfolio y LinkedIn
+- [ ] Cargos unificados en CV, portfolio y LinkedIn: **Backend Engineer** (TekChoice), **Backend Engineer Jr.** (DXC) y **Software Developer Jr.** (Folio3). En LinkedIn falta cambiar Folio3, que hoy dice "Software Engineer Jr."
 - [ ] "Led the modernization" cambiado a "Contributed to the modernization" en el portfolio
 - [ ] BMV, Kapital y Aggora agregados a los 3 CVs con las métricas de la sección 5
-- [ ] Open to work configurado: Backend Developer + 4 puestos, remoto, Guadalajara, solo reclutadores
+- [ ] Open to work configurado: Backend Engineer + 4 puestos, remoto, Guadalajara, solo reclutadores
 - [ ] Recordatorio a 3 meses para revisar que "Open to work" siga activo

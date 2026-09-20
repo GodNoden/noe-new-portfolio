@@ -3,12 +3,12 @@ import type { ProjectItem } from "./content";
 
 const experienceMeta = {
     tekchoice: {
-        role: "Backend Developer",
+        role: "Backend Engineer",
         company: "Tekchoice LLC",
         link: "https://tekchoice.com/",
     },
     dxc: {
-        role: "Backend Developer Jr.",
+        role: "Backend Engineer Jr.",
         company: "DXC Technology Company",
         link: "https://dxc.com/",
     },
