@@ -830,7 +830,7 @@ Las recomendaciones son la única prueba social del perfil que otra persona firm
 
 ### Qué hacer
 
-- **Cadencia sostenible:** 1 publicación cada 2 semanas (2 al mes). Mejor 2 posts buenos al mes que 8 malos y luego desaparecer.
+- **Cadencia sostenible: 1 publicación cada 3 semanas.** Es exactamente lo que dispara el workflow de borradores (cada tercer lunes, 21 días exactos), así que el ritmo que recomienda este documento y el que ejecuta la automatización son el mismo. Son unas 17 publicaciones al año: suficiente para que el perfil no parezca abandonado, y lo bastante espaciado para que cada post tenga algo real detrás. Mejor un post bueno cada tres semanas que ocho malos y desaparecer.
 - **Formato que funciona:** 1 idea por post. Primera línea = gancho con número o contradicción. Luego 3–6 líneas de contexto. Cierre con una pregunta concreta.
 - **Regla de contenido:** nada de "feliz de anunciar que" sin contenido. Cada post debe enseñar algo que el lector pueda aplicar, o mostrar un número real.
 - **Comenta antes de publicar.** 15–20 minutos diarios comentando con criterio en posts de backend, AWS y Java te dan más alcance que un post semanal. Los comentarios son el mayor generador de visitas al perfil y no requieren publicar nada.

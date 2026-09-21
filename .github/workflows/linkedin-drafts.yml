@@ -1,11 +1,16 @@
 name: LinkedIn drafts
 
-# Weekly reminder to post something backed by real work. The workflow only ever
-# opens an issue with drafts — it never publishes to LinkedIn and needs no
-# secret beyond the default GITHUB_TOKEN.
+# Every three weeks, a reminder to post something backed by real work. The
+# workflow only ever opens an issue with drafts — it never publishes to LinkedIn
+# and needs no secret beyond the default GITHUB_TOKEN.
+#
+# GitHub's cron cannot express "every three weeks", so the job is scheduled
+# weekly and the first step keeps only every third run. Because the schedule is
+# always a Monday (a 7-day step) and 21 is a multiple of 7, the phase never
+# drifts: it lands on exactly every third Monday, 21 days apart, forever.
 on:
   schedule:
-    # Mondays at 14:00 UTC.
+    # Mondays at 14:00 UTC — the guard below turns this into a 21-day cadence.
     - cron: "0 14 * * 1"
   workflow_dispatch:
 
@@ -23,19 +28,55 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Keep only every third week
+        id: cadence
+        run: |
+          set -euo pipefail
+
+          # A manual run always generates, so pressing the button is never a
+          # no-op just because the cadence has not come round yet.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Manual run — generating regardless of cadence."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # The cadence is measured from a fixed Monday. The anchor is required,
+          # not decorative: Mondays sit at a constant offset modulo 7 (the Unix
+          # epoch was a Thursday), so a plain `day % 21` cycles through three
+          # non-zero values and would never fire.
+          ANCHOR=2026-01-05
+          if [ "$(date -u -d "$ANCHOR" +%u)" -ne 1 ]; then
+            echo "::error::Cadence anchor ${ANCHOR} is not a Monday — the schedule would never fire."
+            exit 1
+          fi
+
+          days=$(( ( $(date -u +%s) - $(date -u -d "$ANCHOR" +%s) ) / 86400 ))
+          offset=$(( days % 21 ))
+          if [ "$offset" -eq 0 ]; then
+            echo "Day ${days} of the cycle: posting week (every 21 days)."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Day ${days} of the cycle, offset ${offset}: not a posting week, skipping this Monday."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Checkout (full history)
+        if: steps.cadence.outputs.run == 'true'
         uses: actions/checkout@v4
         with:
-          # The generator reads `git log` for the last 7 days, so the full
-          # history has to be present (a shallow clone would hide the commits).
+          # The generator reads `git log` for the whole 21-day window, so the
+          # full history has to be present (a shallow clone would hide commits).
           fetch-depth: 0
 
       - name: Setup Node
+        if: steps.cadence.outputs.run == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
       - name: Generate drafts
+        if: steps.cadence.outputs.run == 'true'
         id: drafts
         run: |
           set -euo pipefail
@@ -48,6 +89,7 @@ jobs:
           echo "Generated drafts: ${draft_file}"
 
       - name: Create issue with drafts
+        if: steps.cadence.outputs.run == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DRAFT_FILE: ${{ steps.drafts.outputs.path }}

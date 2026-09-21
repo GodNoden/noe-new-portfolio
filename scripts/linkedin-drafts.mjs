@@ -5,8 +5,9 @@
  *
  *   1. `app/lib/translations.ts` — the portfolio project entries, parsed
  *      tolerantly (a malformed file degrades instead of throwing).
- *   2. `git log --since="7 days ago"` — recent commits, read-only and always
- *      through `execFileSync` with an argument array, never shell interpolation.
+ *   2. `git log --since="<cadence> days ago"` — recent commits, read-only and
+ *      always through `execFileSync` with an argument array, never shell
+ *      interpolation.
  *
  * Usage:
  *   node scripts/linkedin-drafts.mjs --dry-run   # markdown to stdout, no git
@@ -39,7 +40,14 @@ const PRIMARY_LANGUAGE = 'en'
 const SECONDARY_LANGUAGE = 'es'
 const OUTPUT_LANGUAGES = [PRIMARY_LANGUAGE, SECONDARY_LANGUAGE]
 
-const COMMIT_SINCE = '7 days ago'
+/**
+ * Posting rhythm, in days. The workflow fires weekly and a guard keeps only
+ * every third run, so the commit window has to match the cadence: with a
+ * 7-day window a 21-day cadence would only ever see the tail of the period.
+ */
+const CADENCE_DAYS = 21
+
+const COMMIT_SINCE = `${CADENCE_DAYS} days ago`
 const COMMIT_PRETTY = '%h%x09%ci%x09%s'
 
 const TRANSLATIONS_FROM_ROOT = path.join('app', 'lib', 'translations.ts')
@@ -616,7 +624,7 @@ function buildCommitDraft(commits, site) {
     })
 
     const receipts = [
-        '**Commits in the last 7 days**',
+        `**Commits in the last ${CADENCE_DAYS} days**`,
         ...bullets,
         '',
         `${count} commit${count === 1 ? '' : 's'}` +
@@ -628,8 +636,8 @@ function buildCommitDraft(commits, site) {
     const buildPost = (language) => {
         const hook =
             language === 'en'
-                ? `This week in the repo: ${count} commit${count === 1 ? '' : 's'}, starting with "${first}".`
-                : `Esta semana en el repo: ${count} commit${count === 1 ? '' : 's'}, empezando por "${first}".`
+                ? `Last ${CADENCE_DAYS} days in the repo: ${count} commit${count === 1 ? '' : 's'}, starting with "${first}".`
+                : `Últimos ${CADENCE_DAYS} días en el repo: ${count} commit${count === 1 ? '' : 's'}, empezando por "${first}".`
         const lines = [hook, '', ...receipts]
         if (signature) lines.push('', signature)
         return lines
@@ -637,7 +645,7 @@ function buildCommitDraft(commits, site) {
 
     return {
         id: 'commits',
-        title: 'Weekly progress from the commit log',
+        title: 'Progress from the commit log',
         en: { post: buildPost('en'), hashtags: hashtagsFromText(subjects.join(' '), ['#GitHub', '#BuildInPublic', '#SoftwareEngineering']) },
         es: { post: buildPost('es'), hashtags: hashtagsFromText(subjects.join(' '), ['#GitHub', '#BuildInPublic', '#SoftwareEngineering']) },
         evidence: [`git log --since="${COMMIT_SINCE}" → ${count} commit${count === 1 ? '' : 's'}`],
@@ -699,7 +707,7 @@ function renderMarkdown({ dryRun, gitRead, drafts, warnings, projects, commits }
     lines.push(`# LinkedIn drafts — ${utcDate()}`, '')
     lines.push(
         'Drafts generated from facts that already exist in this repository: the project entries in `app/lib/translations.ts`' +
-            (gitRead ? ' and the last 7 days of `git log`.' : '.'),
+            (gitRead ? ` and the last ${CADENCE_DAYS} days of \`git log\`.` : '.'),
     )
     lines.push('')
     lines.push('> Nothing is published automatically and the LinkedIn API is never called. Review, edit and post manually.')
@@ -713,7 +721,7 @@ function renderMarkdown({ dryRun, gitRead, drafts, warnings, projects, commits }
         lines.push('## No drafts generated', '')
         lines.push(
             'No project entries could be parsed from `app/lib/translations.ts`' +
-                (gitRead ? ' and no commits were found in the last 7 days.' : '.'),
+                (gitRead ? ` and no commits were found in the last ${CADENCE_DAYS} days.` : '.'),
         )
         lines.push('')
         lines.push('Nothing was invented to fill the gap: there is no fact in the repository to base a post on.')
@@ -742,7 +750,7 @@ function renderMarkdown({ dryRun, gitRead, drafts, warnings, projects, commits }
     lines.push('')
     lines.push(
         `_${projects.length} project entr${projects.length === 1 ? 'y' : 'ies'} parsed; ` +
-            (gitRead ? `${commits.length} commit(s) in the last 7 days` : 'git history not read (--dry-run)') +
+            (gitRead ? `${commits.length} commit(s) in the last ${CADENCE_DAYS} days` : 'git history not read (--dry-run)') +
             '._',
     )
 
