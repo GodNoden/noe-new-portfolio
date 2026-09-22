@@ -14,17 +14,16 @@
  * Usage:
  *   pnpm icons:generate
  *
- * Needs the same Chromium build as the CV pipeline, so run `pnpm cv:setup`
- * once on a fresh machine.
+ * Rendering goes through sharp (librsvg), not a headless browser: rasterising
+ * an SVG does not need Chromium, so the icons can be regenerated anywhere —
+ * including CI — without `pnpm cv:setup`. The résumé pipeline is the one that
+ * still needs the browser, because it wants a real print engine.
  */
-import { spawn } from 'node:child_process'
-import { createRequire } from 'node:module'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
-import { chromium } from 'playwright'
+import sharp from 'sharp'
 
-const require = createRequire(import.meta.url)
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const source = path.join(root, 'app', 'icon.svg')
 
@@ -58,48 +57,32 @@ function buildIco(entries) {
     return Buffer.concat([header, directory, ...entries.map((e) => e.png)])
 }
 
+/**
+ * Renders the SVG at an exact pixel size. The `density` multiplier makes
+ * librsvg rasterise big and downscale, which gives smoother antialiasing than
+ * rendering directly at 16 px. Alpha is preserved so the rounded corners stay
+ * transparent instead of white.
+ */
+async function render(svg, size) {
+    return sharp(Buffer.from(svg), { density: 720 })
+        .resize(size, size, { fit: 'fill' })
+        .png()
+        .toBuffer()
+}
+
 async function main() {
     const svg = await readFile(source, 'utf8')
 
-    const browser = await chromium.launch()
-    const page = await browser.newPage()
-
-    // `omitBackground` keeps the rounded corners transparent instead of white.
-    await page.setContent(
-        `<style>html,body{margin:0;background:transparent}img{display:block}</style>` +
-            `<img id="icon" src="data:image/svg+xml;utf8,${encodeURIComponent(svg)}">`
-    )
-    await page.waitForFunction(() => {
-        const img = document.getElementById('icon')
-        return img instanceof HTMLImageElement && img.complete && img.naturalWidth > 0
-    })
-
-    const render = async (size) => {
-        await page.setViewportSize({ width: size, height: size })
-        await page.evaluate((s) => {
-            const img = document.getElementById('icon')
-            img.style.width = `${s}px`
-            img.style.height = `${s}px`
-        }, size)
-        return page.screenshot({ omitBackground: true, clip: { x: 0, y: 0, width: size, height: size } })
-    }
-
     const icoEntries = []
     for (const size of ICO_SIZES) {
-        icoEntries.push({ size, png: await render(size) })
+        icoEntries.push({ size, png: await render(svg, size) })
     }
-
-    const appleIcon = await render(180)
-    const icon192 = await render(192)
-    const icon512 = await render(512)
-
-    await browser.close()
 
     const outputs = [
         [path.join(root, 'app', 'favicon.ico'), buildIco(icoEntries)],
-        [path.join(root, 'app', 'apple-icon.png'), appleIcon],
-        [path.join(root, 'public', 'icon-192.png'), icon192],
-        [path.join(root, 'public', 'icon-512.png'), icon512],
+        [path.join(root, 'app', 'apple-icon.png'), await render(svg, 180)],
+        [path.join(root, 'public', 'icon-192.png'), await render(svg, 192)],
+        [path.join(root, 'public', 'icon-512.png'), await render(svg, 512)],
     ]
 
     await mkdir(path.join(root, 'public'), { recursive: true })
@@ -108,6 +91,9 @@ async function main() {
         console.log(`✓ ${path.relative(root, destination)} (${(data.length / 1024).toFixed(1)} KB)`)
     }
 }
+
+/** Exported for `tests/icons.test.mjs`: the ICO container is pure byte work. */
+export { buildIco, ICO_SIZES, render }
 
 main().catch((error) => {
     console.error(error instanceof Error ? error.message : error)

@@ -1,6 +1,6 @@
 import { translations, type Language } from './translations'
 import { stackCategories, type StackCategory } from './stack'
-import { site } from './site'
+import { site, siteDisplay } from './site'
 
 /**
  * Single source of truth for the résumés.
@@ -293,10 +293,10 @@ export function getCvDocument(language: Language): CvDocument {
         summary: copy.summary,
         contact: {
             email: site.email,
-            phone: '+52 624 175 1162',
-            linkedin: 'linkedin.com/in/noe-ixmak-quezada',
-            github: 'github.com/GodNoden',
-            website: 'www.ixmak.com',
+            phone: site.phone,
+            linkedin: siteDisplay.linkedin,
+            github: siteDisplay.github,
+            website: siteDisplay.website,
         },
         skillGroups: stackCategories.map((category) => ({
             id: category.id,

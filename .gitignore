@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# local Playwright browser cache (pnpm cv:setup)
+/.playwright-browsers/
+
 # next.js
 /.next/
 /out/

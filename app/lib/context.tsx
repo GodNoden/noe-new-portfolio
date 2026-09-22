@@ -1,42 +1,46 @@
 'use client';
 
-import { createContext, useContext, useSyncExternalStore, ReactNode, useCallback } from 'react';
-import { translations, Language } from './translations';
+import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react';
+import { translations, type Language } from './translations';
+import { detectLanguage, STORAGE_KEY } from './language.mjs';
 
 type I18nContextType = {
     language: Language;
     setLanguage: (lang: Language) => void;
-    t: typeof translations[Language];
+    t: (typeof translations)[Language];
 };
 
 const I18nContext = createContext<I18nContextType | null>(null);
 
-const languageStore = {
-    subscribe: (callback: () => void) => {
-        window.addEventListener('storage', callback);
-        return () => window.removeEventListener('storage', callback);
-    },
-    getSnapshot: (): Language => {
-        if (typeof window === 'undefined') return 'en';
-        const stored = localStorage.getItem('language') as Language | null;
-        if (stored && translations[stored]) return stored;
-        const browserLang = navigator.language.split('-')[0];
-        if (browserLang in translations) return browserLang as Language;
-        return 'en';
-    },
-    getServerSnapshot: (): Language => 'en',
-};
+const FALLBACK: Language = 'en';
+const supportedLanguages = Object.keys(translations) as Language[];
 
 export function LanguageProvider({ children }: { children: ReactNode; }) {
-    const language = useSyncExternalStore(
-        languageStore.subscribe,
-        languageStore.getSnapshot,
-        languageStore.getServerSnapshot
-    );
+    // Always render the fallback first so server HTML and the hydration pass
+    // agree (the same mounted-guard pattern ThemeToggle uses); the visitor's own
+    // language lands in an effect, before paint of the second render.
+    const [language, setLanguageState] = useState<Language>(FALLBACK);
+
+    useEffect(() => {
+        const apply = () => {
+            setLanguageState(detectLanguage({
+                stored: window.localStorage.getItem(STORAGE_KEY),
+                browserLanguage: navigator.language,
+                supported: supportedLanguages,
+                fallback: FALLBACK,
+            }));
+        };
+
+        apply();
+        // Real cross-tab sync: the `storage` event fires in the *other* tabs,
+        // which is exactly the case worth handling.
+        window.addEventListener('storage', apply);
+        return () => window.removeEventListener('storage', apply);
+    }, []);
 
     const setLanguage = useCallback((lang: Language) => {
-        localStorage.setItem('language', lang);
-        window.dispatchEvent(new Event('storage'));
+        setLanguageState(lang);
+        window.localStorage.setItem(STORAGE_KEY, lang);
     }, []);
 
     return (

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Noe Quezada">
+  <title>Noe Quezada</title>
+  <!--
+    "N Degradado" — versión activa: rosa → violeta, SIN tile y SIN contorno.
+    Decisiones y medidas en brand/propuesta-favicon/README.md.
+
+    Reglas de brand/ que respeta:
+      · Un solo glifo: una "N". "NQ" a 16 px se lee "NC".
+      · La letra es un polígono cerrado, nunca un trazo con miter.
+      · Se juzga a 16 px sobre barra de pestañas clara Y oscura.
+
+    Sin contorno a propósito: el degradado solo ya se sostiene sobre ambos
+    fondos — #ec4899 (pink-500) → #8b5cf6 (violet-500) mantiene 3.4–5.0:1 a lo
+    largo de todo el recorrido sobre #fafafa y 4.2–5.0:1 sobre #18181b. El
+    contorno negro era una muleta de contraste que además se comía 1 px por
+    lado de los contadores y daba ese aire de clipart con borde.
+
+    El degradado sigue la diagonal de la letra (rosa arriba-izquierda, violeta
+    abajo-derecha): la pareja está medida, no elegida a ojo (ver tabla de
+    parejas descartadas en el README de la propuesta).
+
+    Geometría de la "N" (retícula local 52x54): tallos de 11u, contadores de
+    28u, banda diagonal de 13u (perpendicular 11u, uniforme con los tallos;
+    pendiente 1.55, la del clásico). Los contadores son grandes a propósito:
+    con tallos de 15u se cerraban a 16 px y la letra se leía como un bloque.
+  -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ec4899"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <path transform="translate(4 3) scale(1.077)" fill="url(#g)" d="M0 0H13L41 43.4V0H52V54H34.8L11 17.05V54H0Z"/>
+</svg>

@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Local Playwright browser cache (pnpm cv:setup): downloaded bundles, not source.
+    ".playwright-browsers/**",
   ]),
 ]);
 

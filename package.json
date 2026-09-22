@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "node --test",
     "cv:setup": "playwright install chromium",
     "cv:generate": "next build && node scripts/generate-cv.mjs",
-    "icons:generate": "node scripts/generate-icons.mjs"
+    "icons:generate": "node scripts/generate-icons.mjs",
+    "icons:preview": "node scripts/icon-previews.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -32,6 +34,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.0",
     "playwright": "^1.63.0",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   },

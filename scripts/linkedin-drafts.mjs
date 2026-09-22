@@ -30,6 +30,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { execFileSync } from 'node:child_process'
 import process from 'node:process'
+import { pathToFileURL } from 'node:url'
 
 /* -------------------------------------------------------------------------- */
 /* Configuration                                                              */
@@ -834,4 +835,38 @@ function main() {
     return 0
 }
 
-process.exitCode = main()
+/**
+ * Exported so `tests/linkedin-drafts.test.mjs` can pin the pure logic (and the
+ * real `translations.ts` parsing) with `node --test`. The CLI behaviour is
+ * unchanged: running the file still prints the draft path on stdout.
+ */
+export {
+    truncate,
+    slug,
+    normalizeStatus,
+    parseProjectEntry,
+    parseTranslations,
+    collectProjects,
+    localized,
+    readSiteFacts,
+    signatureLine,
+    splitSentences,
+    sentencesWithNumbers,
+    metricPhrase,
+    pickHeadline,
+    signalScore,
+    rankProjects,
+    detectKind,
+    hashtagsFromText,
+    pickHook,
+    buildDrafts,
+    renderMarkdown,
+    CADENCE_DAYS,
+}
+
+const isMain =
+    process.argv[1] !== undefined && import.meta.url === pathToFileURL(process.argv[1]).href
+
+if (isMain) {
+    process.exitCode = main()
+}

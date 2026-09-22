@@ -15,6 +15,7 @@ export const site = {
     description:
         'Backend Engineer building financial systems on AWS. Java, Spring Boot, serverless and event-driven architectures. Open to remote fintech roles.',
     email: 'quezadanoe@gmail.com',
+    phone: '+52 624 175 1162',
     linkedin: 'https://www.linkedin.com/in/noe-ixmak-quezada/',
     github: 'https://github.com/GodNoden',
     location: {
@@ -37,6 +38,25 @@ export const site = {
         'Microservices',
         'REST API design',
     ],
+} as const
+
+/** Last path segment of a profile URL: `https://github.com/GodNoden` → `GodNoden`. */
+const handleOf = (url: string): string => url.replace(/\/+$/, '').split('/').pop() ?? url
+
+/** Protocol-free forms, for the printable CVs and on-page labels. */
+export const siteDisplay = {
+    linkedin: site.linkedin.replace(/^https?:\/\//, ''),
+    github: site.github.replace(/^https?:\/\//, ''),
+    website: siteUrl.replace(/^https?:\/\//, ''),
+} as const
+
+/**
+ * Profile handles, derived from the URLs above so a label can never show a
+ * different user than the link it sits next to.
+ */
+export const siteHandles = {
+    linkedin: handleOf(site.linkedin),
+    github: handleOf(site.github),
 } as const
 
 /** JSON-LD `Person` graph describing the owner of the site. */

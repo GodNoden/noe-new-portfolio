@@ -1,5 +1,6 @@
 // components/ContactSection.tsx
 import { useTranslation } from '../lib/context';
+import { site, siteHandles } from '../lib/site';
 import { Mail, MapPin, Globe, Plane } from 'lucide-react';
 
 function Linkedin({ className }: { className?: string }) {
@@ -25,22 +26,22 @@ export default function ContactSection() {
         {
             id: 'email',
             label: t.contact.email,
-            value: 'quezadanoe@gmail.com',
-            href: 'mailto:quezadanoe@gmail.com',
+            value: site.email,
+            href: `mailto:${site.email}`,
             Icon: Mail,
         },
         {
             id: 'linkedin',
             label: t.contact.linkedin,
-            value: 'noe-ixmak-quezada',
-            href: 'https://www.linkedin.com/in/noe-ixmak-quezada/',
+            value: siteHandles.linkedin,
+            href: site.linkedin,
             Icon: Linkedin,
         },
         {
             id: 'github',
             label: t.contact.github,
-            value: 'GodNoden',
-            href: 'https://github.com/GodNoden',
+            value: siteHandles.github,
+            href: site.github,
             Icon: Github,
         },
     ];
