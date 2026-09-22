@@ -27,15 +27,15 @@ El PDF exportado omite secciones enteras. Las capturas revelan el resto, y hay m
 
 | Hallazgo | Detalle |
 |---|---|
-| 🔴 **Apariciones en búsquedas** | **1 en los últimos 7 días.** 17 visualizaciones del perfil, 0 impresiones de publicaciones |
-| 🔴 **Red** | **52 contactos**, 56 seguidores, **0 publicaciones** |
-| 🟠 **Proyectos: 4** | Personal Portfolio · ComerBien · Bolsa Mexicana de Valores — Technical Audit · Kapital Landing Page. **Falta Aggora**, tu proyecto de backend más fuerte |
-| 🟠 **Aptitudes invertidas** | Folio3 (2022) arrastra **30** aptitudes; **TekChoice (tu trabajo actual) solo 4**. Ver sección 7 |
-| 🟠 **Ficha del portfolio con datos falsos** | El proyecto "Personal Portfolio" está etiquetado como **React.js y Cloudflare**. Tu portfolio es **Next.js sobre AWS**. Ni React ni Cloudflare |
-| 🟠 **Miniatura obsoleta del portfolio** | La tarjeta muestra una versión antigua de tu web con el nombre **"Noe Ixmak Quezada Torres"** y el cargo **"Software Development Engineer"**. LinkedIn cacheó esa previsualización y no la ha vuelto a leer |
-| 🟡 **Tercer nombre distinto** | LinkedIn: "Noe Ixmak Quezada" · miniatura antigua: "Noe Ixmak Quezada Torres" · CV y web: "Noe Quezada" |
-| 🟡 **Descripción de Kapital mal formada** | Empieza con *"I'm a Backend Engineer with 4+ years of experience in Java…"*, que es una bio, no la descripción de un proyecto. Viene del README del repositorio |
-| ✅ **Titular, banner y "Acerca de"** | Correctos. El banner con `www.ixmak.com` y "B.S. in Computer Systems Engineering" funciona |
+| Crítico: **Apariciones en búsquedas** | **1 en los últimos 7 días.** 17 visualizaciones del perfil, 0 impresiones de publicaciones |
+| Crítico: **Red** | **52 contactos**, 56 seguidores, **0 publicaciones** |
+| Alto: **Proyectos: 4** | Personal Portfolio · ComerBien · Bolsa Mexicana de Valores — Technical Audit · Kapital Landing Page. **Falta Aggora**, tu proyecto de backend más fuerte |
+| Alto: **Aptitudes invertidas** | Folio3 (2022) arrastra **30** aptitudes; **TekChoice (tu trabajo actual) solo 4**. Ver sección 7 |
+| Alto: **Ficha del portfolio con datos falsos** | El proyecto "Personal Portfolio" está etiquetado como **React.js y Cloudflare**. Tu portfolio es **Next.js sobre AWS**. Ni React ni Cloudflare |
+| Alto: **Miniatura obsoleta del portfolio** | La tarjeta muestra una versión antigua de tu web con el nombre **"Noe Ixmak Quezada Torres"** y el cargo **"Software Development Engineer"**. LinkedIn cacheó esa previsualización y no la ha vuelto a leer |
+| Medio: **Tercer nombre distinto** | LinkedIn: "Noe Ixmak Quezada" · miniatura antigua: "Noe Ixmak Quezada Torres" · CV y web: "Noe Quezada" |
+| Medio: **Descripción de Kapital mal formada** | Empieza con *"I'm a Backend Engineer with 4+ years of experience in Java…"*, que es una bio, no la descripción de un proyecto. Viene del README del repositorio |
+| Correcto: **Titular, banner y "Acerca de"** | Correctos. El banner con `www.ixmak.com` y "B.S. in Computer Systems Engineering" funciona |
 
 **Sobre la miniatura obsoleta:** cuando el portfolio nuevo esté desplegado, usa el [Post Inspector de LinkedIn](https://www.linkedin.com/post-inspector/) con `https://www.ixmak.com` para forzar a LinkedIn a releer la tarjeta Open Graph. Ya generamos una imagen de previsualización correcta (1200×630), pero LinkedIn no la verá hasta que le digas explícitamente que vuelva a rastrear la URL.
 
@@ -45,14 +45,14 @@ Un reclutador compara LinkedIn, tu CV y tu portfolio. Estos son los choques real
 
 | # | Campo | LinkedIn | CV / Portfolio | Gravedad |
 |---|---|---|---|---|
-| 1 | **Titulación y año de fin** | Ciclo Formativo de Grado Superior, **2018–2021** | B.S. / Ingeniería en Sistemas Computacionales, **2018–2023** | 🔴 Crítica — **resuelto: LinkedIn está mal** |
-| 2 | **Aptitudes fijadas** | TypeScript · Internacionalización · Tailwind CSS v4 | Java · Spring Boot · AWS | 🔴 Crítica |
-| 3 | Cargo TekChoice | Backend **Engineer** | Backend **Developer** | 🟠 Alta |
-| 4 | Cargo Folio3 | Software **Engineer** Jr. | Software **Developer** Jr. | 🟠 Alta |
-| 5 | Fechas Folio3 | Jul 2022 – Mar 2023 | Ago 2022 – Abr 2023 | 🟠 Alta |
-| 6 | Proyectos: BMV, Aggora, Kapital | Ausentes | En el portfolio | 🟠 Alta |
-| 7 | Idiomas: Inglés B2, Francés B1 | Ausentes | En los 3 CVs | 🟡 Media |
-| 8 | Nombre | Noe **Ixmak** Quezada | Noe Quezada | 🟡 Baja |
+| 1 | **Titulación y año de fin** | Ciclo Formativo de Grado Superior, **2018–2021** | B.S. / Ingeniería en Sistemas Computacionales, **2018–2023** | Crítica — **resuelto: LinkedIn está mal** |
+| 2 | **Aptitudes fijadas** | TypeScript · Internacionalización · Tailwind CSS v4 | Java · Spring Boot · AWS | Crítica |
+| 3 | Cargo TekChoice | Backend **Engineer** | Backend **Developer** | Alta |
+| 4 | Cargo Folio3 | Software **Engineer** Jr. | Software **Developer** Jr. | Alta |
+| 5 | Fechas Folio3 | Jul 2022 – Mar 2023 | Ago 2022 – Abr 2023 | Alta |
+| 6 | Proyectos: BMV, Aggora, Kapital | Ausentes | En el portfolio | Alta |
+| 7 | Idiomas: Inglés B2, Francés B1 | Ausentes | En los 3 CVs | Media |
+| 8 | Nombre | Noe **Ixmak** Quezada | Noe Quezada | Baja |
 
 **Sobre el #1 — resuelto:** confirmaste que **el CV es el correcto**: Ingeniería en Sistemas Computacionales, 2018–2023, Universidad de Guadalajara (CUCEI). Por tanto **el dato a corregir es el de LinkedIn**, que hoy dice otra titulación y otro año de fin. Un perfil de LinkedIn que declara dos años menos de estudios y una titulación distinta a la de tu CV es exactamente lo que salta en una verificación de antecedentes, y en el peor caso se lee como una inconsistencia deliberada. Corrígelo con este texto:
 
@@ -90,7 +90,7 @@ Ordenados por relación impacto/esfuerzo, ya con el perfil a la vista. El orden 
 
 ### 1. Aptitudes (Skills): limpiar la lista y reasignarla a TekChoice — 10 minutos
 
-✅ **Lo primero ya está hecho:** las tres fijadas pasaron de `TypeScript · Internacionalización · Tailwind CSS v4` a **Java · Spring Boot · Amazon Web Services (AWS)**, que es lo correcto.
+**Lo primero ya está hecho:** las tres fijadas pasaron de `TypeScript · Internacionalización · Tailwind CSS v4` a **Java · Spring Boot · Amazon Web Services (AWS)**, que es lo correcto.
 
 Queda lo de fondo, que es el motivo por el que la sección se siente desordenada: hay **49 aptitudes** con duplicados, aptitudes que no son aptitudes y blandas mezcladas con técnicas, y están **asociadas al empleo equivocado** (Folio3 arrastra 30; TekChoice solo 4).
 
@@ -138,11 +138,11 @@ Estos son hechos verificados y cada uno tiene una corrección concreta. Hazlas e
 
 | # | Problema detectado | Acción exacta |
 |---|---|---|
-| 1 | El CV en francés enlazaba `linkedin.com/in/noe-ixmal-quezada` (con **L**, no **K**) → enlace roto | ✅ **Ya cerrado por construcción.** Los 3 CVs se generan desde `app/lib/profile.ts` y la URL sale de `app/lib/site.ts`, así que la errata no puede volver |
-| 2 | Cargos distintos entre LinkedIn, CV y portfolio | ⚠️ **Casi cerrado.** CVs y portfolio ya dicen **Backend Engineer** (TekChoice), **Backend Engineer Jr.** (DXC) y **Software Developer Jr.** (Folio3). LinkedIn coincide en los dos primeros, pero en Folio3 pone **"Software Engineer Jr."** y hay que cambiarlo. Y falta cambiar la primera palabra de tu titular: `Developer` → `Engineer` |
-| 3 | Portfolio EN: "Led the modernization" (DXC) vs CV ES: "Contribuí a la modernización" | ✅ **Ya cerrado.** El texto en inglés ya decía "Contributed to"; se corrigió además un error de gramática francesa ("à de la modernisation" → "à la modernisation"). El "Led" que se ve hoy en ixmak.com es del sitio sin desplegar |
-| 4 | Stack divergente: el CV listaba Azure, Bash, Git, Jira y Postman y el portfolio no | ✅ **Ya unificado del lado del código.** Bash, Azure, Git, Jira y Postman están ahora en `app/lib/stack.ts`, que alimenta a la vez el portfolio y los 3 CVs |
-| 5 | Los 3 CVs no incluían BMV, Kapital ni Aggora | ✅ **Ya corregido.** Los CVs se generan desde los datos del portfolio y ya los incluyen. Falta publicarlos en Destacados (sección 5) |
+| 1 | El CV en francés enlazaba `linkedin.com/in/noe-ixmal-quezada` (con **L**, no **K**) → enlace roto | **Ya cerrado por construcción.** Los 3 CVs se generan desde `app/lib/profile.ts` y la URL sale de `app/lib/site.ts`, así que la errata no puede volver |
+| 2 | Cargos distintos entre LinkedIn, CV y portfolio | **Casi cerrado.** CVs y portfolio ya dicen **Backend Engineer** (TekChoice), **Backend Engineer Jr.** (DXC) y **Software Developer Jr.** (Folio3). LinkedIn coincide en los dos primeros, pero en Folio3 pone **"Software Engineer Jr."** y hay que cambiarlo. Y falta cambiar la primera palabra de tu titular: `Developer` → `Engineer` |
+| 3 | Portfolio EN: "Led the modernization" (DXC) vs CV ES: "Contribuí a la modernización" | **Ya cerrado.** El texto en inglés ya decía "Contributed to"; se corrigió además un error de gramática francesa ("à de la modernisation" → "à la modernisation"). El "Led" que se ve hoy en ixmak.com es del sitio sin desplegar |
+| 4 | Stack divergente: el CV listaba Azure, Bash, Git, Jira y Postman y el portfolio no | **Ya unificado del lado del código.** Bash, Azure, Git, Jira y Postman están ahora en `app/lib/stack.ts`, que alimenta a la vez el portfolio y los 3 CVs |
+| 5 | Los 3 CVs no incluían BMV, Kapital ni Aggora | **Ya corregido.** Los CVs se generan desde los datos del portfolio y ya los incluyen. Falta publicarlos en Destacados (sección 5) |
 | 6 | Destacados y Proyectos vacíos en LinkedIn | Es la sección de mayor impacto y la más ignorada: sección 5 |
 | 7 | Fechas de Folio3 no coinciden (LinkedIn Jul 2022 – Mar 2023 vs CV Ago 2022 – Abr 2023) | Verifica cuál es correcta y unifica. Un desfase de dos meses no es grave, pero es la clase de detalle que un reclutador ordena mentalmente como "descuidado" |
 | 8 | Discrepancia de titulación y año de fin (sección 0, #1) | Prioridad máxima de este documento |

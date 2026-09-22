@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Noe Quezada">
-  <title>Noe Quezada</title>
-  <!-- Alternativa en ámbar sólido, SIN contorno: #d97706 mide 3.05:1 sobre
-       #fafafa y 5.56:1 sobre #18181b. Misma silueta que la versión activa. -->
-  <path transform="translate(4 3) scale(1.077)" fill="#d97706" d="M0 0H13L41 43.4V0H52V54H34.8L11 17.05V54H0Z"/>
-</svg>

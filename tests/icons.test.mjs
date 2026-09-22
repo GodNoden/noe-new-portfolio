@@ -46,7 +46,7 @@ test('the shipped ICO sizes are the documented ones', () => {
 })
 
 /* -------------------------------------------------------------------------- */
-/* Brand rules on app/icon.svg (see brand/favicon-alternatives/README.md)     */
+/* Brand rules on app/icon.svg (see brand/propuesta-favicon/README.md)        */
 /* -------------------------------------------------------------------------- */
 
 test('app/icon.svg obeys the documented brand rules', () => {
