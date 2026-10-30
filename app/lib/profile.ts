@@ -39,9 +39,9 @@ const employerByLink: Record<string, EmployerId> = {
  * complete list. Everything not listed here still lives on the website.
  */
 const cvProjectUrls: readonly string[] = [
+    'https://github.com/GodNoden/aggora',
     'https://github.com/GodNoden/bmv-audit',
     'https://github.com/GodNoden/kapital-clone',
-    'https://github.com/GodNoden/aggora',
 ]
 
 /** Longest project blurb the CV will print before falling back to one sentence. */

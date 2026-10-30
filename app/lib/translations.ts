@@ -59,6 +59,22 @@ export const translations = {
             inProgress: "In-progress",
             items: [
                 {
+                    name: "Aggora — Kafka Event Pipeline for Market Data",
+                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Prometheus · Docker",
+                    description:
+                        "Event-driven market data pipeline built twice, in Spring Boot and Quarkus, both writing the same topics so their behaviour can be compared side by side. Covers the whole path: ingestion, schema-validated normalization, poison-pill handling with dead-letter and retry topics, transactional producers for exactly-once semantics, and windowed analytics (VWAP, volatility) in a state store. Ships five reproducible failure lessons: a broker down, a poison pill reaching the DLT, a consumer rebalance, an exactly-once race, and a dead stream engine behind a live process — each measuring what actually happens instead of asserting it. Includes a read-only Angular dashboard that explains the pipeline visually: seven Prometheus panels, live ticks and alerts over WebSocket, and lag, offsets and partition health over a deliberately closed metrics catalog, so the page observes and explains rather than querying freely.",
+                    url: "https://github.com/GodNoden/aggora",
+                    status: roadmapStatus.completed,
+                },
+                {
+                    name: "ComerBien (Recipe and Nutritional Tracking App)",
+                    tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
+                    description:
+                        "A web application that allows users to track their meals, recipes, and nutritional intake. Built with React for the frontend and Java with Spring Boot for the backend, using PostgreSQL as the database. Developed using Docker for containerization and DB and Backend deployed on Railway and Frontend deployed on Netlify.",
+                    url: "https://github.com/GodNoden/ComerBien",
+                    status: undefined,
+                },
+                {
                     name: "BMV Technical Audit",
                     tech: "Lighthouse · axe · TypeScript · SVG · Performance",
                     description:
@@ -75,11 +91,11 @@ export const translations = {
                     status: undefined,
                 },
                 {
-                    name: "ComerBien (Recipe and Nutritional Tracking App)",
-                    tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
+                    name: "My Portfolio",
+                    tech: "Next.js · App Router · TypeScript · Tailwind · next-themes · i18n",
                     description:
-                        "A web application that allows users to track their meals, recipes, and nutritional intake. Built with React for the frontend and Java with Spring Boot for the backend, using PostgreSQL as the database. Developed using Docker for containerization and DB and Backend deployed on Railway and Frontend deployed on Netlify.",
-                    url: "https://github.com/GodNoden/ComerBien",
+                        "Personal portfolio with three-language support (EN/ES/FR), system-aware dark mode, and a component-driven architecture. Built on Next.js App Router with server components where possible.",
+                    url: "https://github.com/GodNoden/noe-new-portfolio",
                     status: undefined,
                 },
                 {
@@ -90,22 +106,6 @@ export const translations = {
                     url: undefined,
                     status: roadmapStatus.inProgress,
                 },
-                {
-                    name: "My Portfolio",
-                    tech: "Next.js · App Router · TypeScript · Tailwind · next-themes · i18n",
-                    description:
-                        "Personal portfolio with three-language support (EN/ES/FR), system-aware dark mode, and a component-driven architecture. Built on Next.js App Router with server components where possible.",
-                    url: "https://github.com/GodNoden/noe-new-portfolio",
-                    status: undefined,
-                },
-                {
-                    name: "Aggora — Kafka Event Pipeline for Market Data",
-                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Prometheus · Docker",
-                    description:
-                        "Event-driven market data pipeline built twice, in Spring Boot and Quarkus, both writing the same topics so their behaviour can be compared side by side. Covers the whole path: ingestion, schema-validated normalization, poison-pill handling with dead-letter and retry topics, transactional producers for exactly-once semantics, and windowed analytics (VWAP, volatility) in a state store. Ships five reproducible failure lessons: a broker down, a poison pill reaching the DLT, a consumer rebalance, an exactly-once race, and a dead stream engine behind a live process — each measuring what actually happens instead of asserting it. Includes a read-only Angular dashboard that explains the pipeline visually: seven Prometheus panels, live ticks and alerts over WebSocket, and lag, offsets and partition health over a deliberately closed metrics catalog, so the page observes and explains rather than querying freely.",
-                    url: "https://github.com/GodNoden/aggora",
-                    status: undefined,
-                },
             ] satisfies ProjectItem[]
         },
         stack: {
@@ -113,6 +113,7 @@ export const translations = {
             categories: {
                 languages: "Languages",
                 frameworks: "Frameworks",
+                streaming: "Event-Driven & Streaming",
                 cloud: "Cloud & DevOps",
                 databases: "Databases",
                 architecture: "Architecture & Patterns",
@@ -122,7 +123,7 @@ export const translations = {
         },
         contact: {
             title: "Contact",
-            intro: "Backend engineer with experience in financial systems, event-driven architectures, and AWS. Currently looking for backend roles at fintech and financial institutions.",
+            intro: "Backend engineer with experience in financial systems, event-driven architectures, and AWS. Open to senior backend roles in fintech and financial infrastructure.",
             availability: "Available for remote work",
             location: "Based in Guadalajara, Jalisco",
             relocation: "Open to relocation",
@@ -144,32 +145,23 @@ export const translations = {
             },
             futureProjects: [
                 {
-                    id: "kafka-markets",
-                    title: "Global Markets Event Platform (Kafka Deep-Dive)",
+                    id: "payments-playground",
+                    title: "Payments Reliability Playground",
                     description:
-                        "Production-shaped streaming platform for global market data, built twice (Spring Boot and Quarkus) to exercise Kafka's core and advanced concepts: deliberate partitioning, exactly-once semantics, Kafka Streams windowing and joins, Schema Registry evolution, transactional outbox, and multi-broker failure behavior.",
-                    targetDate: "Q2 2027",
-                    status: roadmapStatus.completed,
+                        "Small services that make payment failure modes explicit: a charge endpoint that never double-charges on retry, a sliding-window rate limiter with per-client quotas and idle-key eviction, and a transaction log parser that reports the exact line and reason it rejected. Every behaviour is covered by tests that run under concurrency.",
+                    targetDate: "Q1 2027",
+                    status: roadmapStatus.planned,
                 },
             ],
             targetCertifications: [
                 {
-                    id: "aws-ccp",
-                    title: "AWS Certified Cloud Practitioner",
+                    id: "aws-saa",
+                    title: "AWS Certified Solutions Architect – Associate",
                     description:
-                        "Foundational AWS certification covering core services, billing, security, and the shared responsibility model.",
-                    targetDate: "Q4 2026",
-                    status: roadmapStatus.planned,
-                    url: "https://aws.amazon.com/certification/certified-cloud-practitioner/",
-                },
-                {
-                    id: "gcp-ace",
-                    title: "Google Cloud Associate Cloud Engineer",
-                    description:
-                        "Deploying, monitoring, and maintaining GCP projects and services. Complements the AWS foundation with a second cloud provider.",
+                        "Professional-level AWS certification focused on designing resilient, secure and cost-aware architectures: multi-AZ design, IAM boundaries, and messaging and storage trade-offs.",
                     targetDate: "Q1 2027",
                     status: roadmapStatus.planned,
-                    url: "https://cloud.google.com/certification/cloud-engineer",
+                    url: "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
                 },
                 {
                     id: "cambridge-c1",
@@ -237,6 +229,22 @@ export const translations = {
             inProgress: "En proceso",
             items: [
                 {
+                    name: "Aggora — Pipeline de eventos Kafka para datos de mercado",
+                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Prometheus · Docker",
+                    description:
+                        "Pipeline de datos de mercado orientado a eventos, construido dos veces, una en Spring Boot y en Quarkus, escribiendo ambos los mismos topics para poder comparar su comportamiento lado a lado. Cubre el camino completo: ingesta, normalización validada contra el esquema, manejo de mensajes envenenados con topics de descarte y reintento, productores transaccionales para semántica exactly-once, y analítica por ventanas en un state store. Incluye cinco lecciones de fallo reproducibles —un broker caído, un mensaje envenenado llegando al DLT, un rebalanceo de consumidores, una carrera de exactly-once y un motor de streams muerto con el proceso vivo— midiendo en cada una lo que realmente pasa en vez de afirmarlo. Suma un dashboard Angular de solo lectura que explica el pipeline visualmente: siete paneles de Prometheus, ticks y alertas en vivo por WebSocket, y lag, offsets y salud de particiones a través de un catálogo de métricas deliberadamente cerrado, para que la página observe y explique en lugar de consultar libremente.",
+                    url: "https://github.com/GodNoden/aggora",
+                    status: roadmapStatus.completed,
+                },
+                {
+                    name: "ComerBien (Aplicación de seguimiento de recetas y nutrición)",
+                    tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
+                    description:
+                        "Una aplicación web que permite a los usuarios realizar un seguimiento de sus comidas, recetas e ingesta nutricional. Construida con React para el frontend y Java con Spring Boot para el backend, utilizando PostgreSQL como base de datos. Desarrollada usando Docker para la contenedorización y desplegada en Railway (DB y Backend) y Netlify (Frontend).",
+                    url: "https://github.com/GodNoden/ComerBien",
+                    status: undefined,
+                },
+                {
                     name: "Auditoría técnica a la BMV",
                     tech: "Lighthouse · axe · TypeScript · SVG · Performance",
                     description:
@@ -253,11 +261,11 @@ export const translations = {
                     status: undefined,
                 },
                 {
-                    name: "ComerBien (Aplicación de seguimiento de recetas y nutrición)",
-                    tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
+                    name: "Mi Portafolio",
+                    tech: "Next.js · App Router · TypeScript · Tailwind · next-themes · i18n",
                     description:
-                        "Una aplicación web que permite a los usuarios realizar un seguimiento de sus comidas, recetas e ingesta nutricional. Construida con React para el frontend y Java con Spring Boot para el backend, utilizando PostgreSQL como base de datos. Desarrollada usando Docker para la contenedorización y desplegada en Railway (DB y Backend) y Netlify (Frontend).",
-                    url: "https://github.com/GodNoden/ComerBien",
+                        "Portafolio personal con soporte para tres idiomas (EN/ES/FR), modo oscuro que respeta la preferencia del sistema, y una arquitectura basada en componentes. Construido sobre Next.js App Router con server components donde es posible.",
+                    url: "https://github.com/GodNoden/noe-new-portfolio",
                     status: undefined,
                 },
                 {
@@ -268,22 +276,6 @@ export const translations = {
                     url: undefined,
                     status: roadmapStatus.inProgress,
                 },
-                {
-                    name: "Mi Portafolio",
-                    tech: "Next.js · App Router · TypeScript · Tailwind · next-themes · i18n",
-                    description:
-                        "Portafolio personal con soporte para tres idiomas (EN/ES/FR), modo oscuro que respeta la preferencia del sistema, y una arquitectura basada en componentes. Construido sobre Next.js App Router con server components donde es posible.",
-                    url: "https://github.com/GodNoden/noe-new-portfolio",
-                    status: undefined,
-                },
-                {
-                    name: "Aggora — Pipeline de eventos Kafka para datos de mercado",
-                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Prometheus · Docker",
-                    description:
-                        "Pipeline de datos de mercado orientado a eventos, construido dos veces, una en Spring Boot y en Quarkus, escribiendo ambos los mismos topics para poder comparar su comportamiento lado a lado. Cubre el camino completo: ingesta, normalización validada contra el esquema, manejo de mensajes envenenados con topics de descarte y reintento, productores transaccionales para semántica exactly-once, y analítica por ventanas en un state store. Incluye cinco lecciones de fallo reproducibles —un broker caído, un mensaje envenenado llegando al DLT, un rebalanceo de consumidores, una carrera de exactly-once y un motor de streams muerto con el proceso vivo— midiendo en cada una lo que realmente pasa en vez de afirmarlo. Suma un dashboard Angular de solo lectura que explica el pipeline visualmente: siete paneles de Prometheus, ticks y alertas en vivo por WebSocket, y lag, offsets y salud de particiones a través de un catálogo de métricas deliberadamente cerrado, para que la página observe y explique en lugar de consultar libremente.",
-                    url: "https://github.com/GodNoden/aggora",
-                    status: undefined,
-                },
             ] satisfies ProjectItem[]
         },
         stack: {
@@ -291,6 +283,7 @@ export const translations = {
             categories: {
                 languages: "Lenguajes",
                 frameworks: "Frameworks",
+                streaming: "Eventos y streaming",
                 cloud: "Cloud y DevOps",
                 databases: "Bases de datos",
                 architecture: "Arquitectura y patrones",
@@ -300,7 +293,7 @@ export const translations = {
         },
         contact: {
             title: "Contacto",
-            intro: "Backend engineer con experiencia en sistemas financieros, arquitecturas orientadas a eventos y AWS. Actualmente busco roles backend en fintech e instituciones financieras.",
+            intro: "Backend engineer con experiencia en sistemas financieros, arquitecturas orientadas a eventos y AWS. Abierto a roles backend senior en fintech e infraestructura financiera.",
             availability: "Disponible para trabajo remoto",
             location: "Basado en Guadalajara, Jalisco",
             relocation: "Disponible para mudarse",
@@ -322,32 +315,23 @@ export const translations = {
             },
             futureProjects: [
                 {
-                    id: "kafka-markets",
-                    title: "Global Markets Event Platform (Kafka Deep-Dive)",
+                    id: "payments-playground",
+                    title: "Playground de confiabilidad para pagos",
                     description:
-                        "Plataforma de streaming con forma de producción para datos de mercados globales, construida dos veces (Spring Boot y Quarkus) para ejercitar conceptos core y avanzados de Kafka: particionamiento deliberado, semántica exactly-once, windowing y joins en Kafka Streams, evolución de esquemas con Schema Registry, transactional outbox y comportamiento ante fallo de múltiples brokers.",
-                    targetDate: "Q2 2027",
-                    status: roadmapStatus.completed,
+                        "Servicios pequeños que hacen explícitos los modos de fallo de un sistema de pagos: un endpoint de cobro que no duplica el cargo ante un reintento, un rate limiter de ventana deslizante con cuotas por cliente y poda de claves ociosas, y un parser de logs de transacciones que reporta la línea exacta y el motivo del rechazo. Cada comportamiento está cubierto por pruebas que corren bajo concurrencia.",
+                    targetDate: "Q1 2027",
+                    status: roadmapStatus.planned,
                 },
             ],
             targetCertifications: [
                 {
-                    id: "aws-ccp",
-                    title: "AWS Certified Cloud Practitioner",
+                    id: "aws-saa",
+                    title: "AWS Certified Solutions Architect – Associate",
                     description:
-                        "Certificación foundational de AWS que cubre servicios core, facturación, seguridad y el modelo de responsabilidad compartida.",
-                    targetDate: "Q4 2026",
-                    status: roadmapStatus.planned,
-                    url: "https://aws.amazon.com/es/certification/certified-cloud-practitioner/",
-                },
-                {
-                    id: "gcp-ace",
-                    title: "Google Cloud Associate Cloud Engineer",
-                    description:
-                        "Despliegue, monitoreo y mantenimiento de proyectos y servicios en GCP. Complementa la base de AWS con un segundo proveedor cloud.",
+                        "Certificación de nivel profesional de AWS enfocada en diseñar arquitecturas resilientes, seguras y conscientes del costo: diseño multi-AZ, límites de IAM y trade-offs de mensajería y almacenamiento.",
                     targetDate: "Q1 2027",
                     status: roadmapStatus.planned,
-                    url: "https://cloud.google.com/certification/cloud-engineer?hl=es",
+                    url: "https://aws.amazon.com/es/certification/certified-solutions-architect-associate/",
                 },
                 {
                     id: "cambridge-c1",
@@ -415,6 +399,22 @@ export const translations = {
             inProgress: "En cours",
             items: [
                 {
+                    name: "Aggora — Pipeline d'événements Kafka pour données de marché",
+                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Prometheus · Docker",
+                    description:
+                        "Pipeline de données de marché orienté événements, construit deux fois, une en Spring Boot et aussi en Quarkus, les deux écrivant les mêmes topics afin de pouvoir comparer leur comportement côte à côte. Couvre tout le chemin : ingestion, normalisation validée par le schéma, gestion des messages empoisonnés avec topics de rebut et de reprise, producteurs transactionnels pour une sémantique exactly-once, et analytique par fenêtres dans un state store. Livre cinq leçons de panne reproductibles, un broker arrêté, un message empoisonné arrivant au DLT, un rééquilibrage de consommateurs, une course exactly-once et un moteur de streams mort derrière un processus vivant, en mesurant à chaque fois ce qui se passe réellement au lieu de l'affirmer. Comprend un dashboard Angular en lecture seule qui explique le pipeline visuellement : sept panneaux Prometheus, ticks et alertes en direct par WebSocket, et lag, offsets et santé des partitions via un catalogue de métriques volontairement fermé, pour que la page observe et explique plutôt que d'interroger librement.",
+                    url: "https://github.com/GodNoden/aggora",
+                    status: roadmapStatus.completed,
+                },
+                {
+                    name: "ComerBien (Application de suivi de recettes et nutrition)",
+                    tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
+                    description:
+                        "Une application web qui permet aux utilisateurs de suivre leurs repas, recettes et apports nutritionnels. Construite avec React pour le frontend et Java avec Spring Boot pour le backend, utilisant PostgreSQL comme base de données. Développée en utilisant Docker pour la conteneurisation et déployée sur Railway (DB et Backend) et Netlify (Frontend).",
+                    url: "https://github.com/GodNoden/ComerBien",
+                    status: undefined,
+                },
+                {
                     name: "Audit technique de la BMV",
                     tech: "Lighthouse · axe · TypeScript · SVG · Performance",
                     description:
@@ -431,11 +431,11 @@ export const translations = {
                     status: undefined,
                 },
                 {
-                    name: "ComerBien (Application de suivi de recettes et nutrition)",
-                    tech: "React · Java · Spring Boot · PostgreSQL · Docker · Railway · Netlify",
+                    name: "Mon Portfolio",
+                    tech: "Next.js · App Router · TypeScript · Tailwind · next-themes · i18n",
                     description:
-                        "Une application web qui permet aux utilisateurs de suivre leurs repas, recettes et apports nutritionnels. Construite avec React pour le frontend et Java avec Spring Boot pour le backend, utilisant PostgreSQL comme base de données. Développée en utilisant Docker pour la conteneurisation et déployée sur Railway (DB et Backend) et Netlify (Frontend).",
-                    url: "https://github.com/GodNoden/ComerBien",
+                        "Portfolio personnel avec support de trois langues (EN/ES/FR), mode sombre respectant la préférence système, et une architecture basée sur des composants. Construit sur Next.js App Router avec des server components là où c'est pertinent.",
+                    url: "https://github.com/GodNoden/noe-new-portfolio",
                     status: undefined,
                 },
                 {
@@ -446,22 +446,6 @@ export const translations = {
                     url: undefined,
                     status: roadmapStatus.inProgress,
                 },
-                {
-                    name: "Mon Portfolio",
-                    tech: "Next.js · App Router · TypeScript · Tailwind · next-themes · i18n",
-                    description:
-                        "Portfolio personnel avec support de trois langues (EN/ES/FR), mode sombre respectant la préférence système, et une architecture basée sur des composants. Construit sur Next.js App Router avec des server components là où c'est pertinent.",
-                    url: "https://github.com/GodNoden/noe-new-portfolio",
-                    status: undefined,
-                },
-                {
-                    name: "Aggora — Pipeline d'événements Kafka pour données de marché",
-                    tech: "Java · Spring Boot · Quarkus · Apache Kafka · Kafka Streams · Prometheus · Docker",
-                    description:
-                        "Pipeline de données de marché orienté événements, construit deux fois, une en Spring Boot et aussi en Quarkus, les deux écrivant les mêmes topics afin de pouvoir comparer leur comportement côte à côte. Couvre tout le chemin : ingestion, normalisation validée par le schéma, gestion des messages empoisonnés avec topics de rebut et de reprise, producteurs transactionnels pour une sémantique exactly-once, et analytique par fenêtres dans un state store. Livre cinq leçons de panne reproductibles, un broker arrêté, un message empoisonné arrivant au DLT, un rééquilibrage de consommateurs, une course exactly-once et un moteur de streams mort derrière un processus vivant, en mesurant à chaque fois ce qui se passe réellement au lieu de l'affirmer. Comprend un dashboard Angular en lecture seule qui explique le pipeline visuellement : sept panneaux Prometheus, ticks et alertes en direct par WebSocket, et lag, offsets et santé des partitions via un catalogue de métriques volontairement fermé, pour que la page observe et explique plutôt que d'interroger librement.",
-                    url: "https://github.com/GodNoden/aggora",
-                    status: roadmapStatus.completed,
-                },
             ] satisfies ProjectItem[]
         },
         stack: {
@@ -469,6 +453,7 @@ export const translations = {
             categories: {
                 languages: "Langages",
                 frameworks: "Frameworks",
+                streaming: "Événements et streaming",
                 cloud: "Cloud et DevOps",
                 databases: "Bases de données",
                 architecture: "Architecture et patterns",
@@ -478,7 +463,7 @@ export const translations = {
         },
         contact: {
             title: "Contact",
-            intro: "Ingénieur backend avec de l'expérience en systèmes financiers, architectures événementielles et AWS. Actuellement à la recherche de postes backend en fintech et institutions financières.",
+            intro: "Ingénieur backend avec de l'expérience en systèmes financiers, architectures événementielles et AWS. Ouvert aux postes backend seniors en fintech et infrastructure financière.",
             availability: "Disponible pour travail à distance",
             location: "Basé à Guadalajara, Jalisco",
             relocation: "Disponible pour se déplacer",
@@ -500,32 +485,23 @@ export const translations = {
             },
             futureProjects: [
                 {
-                    id: "kafka-markets",
-                    title: "Global Markets Event Platform (Kafka Deep-Dive)",
+                    id: "payments-playground",
+                    title: "Bac à sable de fiabilité des paiements",
                     description:
-                        "Plateforme de streaming aux allures de production pour les données de marchés mondiaux, construite deux fois (Spring Boot et Quarkus) afin d'exercer les concepts essentiels et avancés de Kafka : partitionnement délibéré, sémantique exactly-once, windowing et jointures dans Kafka Streams, évolution de schémas via Schema Registry, transactional outbox et comportement face à la défaillance de plusieurs brokers.",
-                    targetDate: "T2 2027",
-                    status: roadmapStatus.completed,
+                        "De petits services qui rendent explicites les modes de défaillance d'un système de paiement : un endpoint de débit qui ne double jamais un prélèvement lors d'une reprise, un rate limiter à fenêtre glissante avec quotas par client et purge des clés inactives, et un analyseur de journaux de transactions qui indique la ligne exacte et le motif du rejet. Chaque comportement est couvert par des tests exécutés sous concurrence.",
+                    targetDate: "T1 2027",
+                    status: roadmapStatus.planned,
                 },
             ],
             targetCertifications: [
                 {
-                    id: "aws-ccp",
-                    title: "AWS Certified Cloud Practitioner",
+                    id: "aws-saa",
+                    title: "AWS Certified Solutions Architect – Associate",
                     description:
-                        "Certification foundational AWS couvrant les services essentiels, la facturation, la sécurité et le modèle de responsabilité partagée.",
-                    targetDate: "T4 2026",
+                        "Certification AWS de niveau professionnel axée sur la conception d'architectures résilientes, sécurisées et soucieuses des coûts : conception multi-AZ, limites IAM et arbitrages de messagerie et de stockage.",
+                    targetDate: "T2 2027",
                     status: roadmapStatus.planned,
-                    url: "https://aws.amazon.com/fr/certification/certified-cloud-practitioner/",
-                },
-                {
-                    id: "gcp-ace",
-                    title: "Google Cloud Associate Cloud Engineer",
-                    description:
-                        "Déploiement, surveillance et maintenance de projets et services GCP. Complète la base AWS avec un second fournisseur cloud.",
-                    targetDate: "T1 2027",
-                    status: roadmapStatus.planned,
-                    url: "https://cloud.google.com/certification/cloud-engineer?hl=fr",
+                    url: "https://aws.amazon.com/fr/certification/certified-solutions-architect-associate/",
                 },
                 {
                     id: "cambridge-c1",

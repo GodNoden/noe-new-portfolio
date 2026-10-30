@@ -1,5 +1,13 @@
 export type StackCategory = {
-    id: 'languages' | 'frameworks' | 'cloud' | 'databases' | 'architecture' | 'testing' | 'tools'
+    id:
+        | 'languages'
+        | 'frameworks'
+        | 'streaming'
+        | 'cloud'
+        | 'databases'
+        | 'architecture'
+        | 'testing'
+        | 'tools'
     items: string[]
 }
 
@@ -14,7 +22,18 @@ export const stackCategories: StackCategory[] = [
     },
     {
         id: 'frameworks',
-        items: ["Spring Boot", "Laravel"],
+        items: ["Spring Boot", "Spring Batch", "Quarkus", "Laravel"],
+    },
+    {
+        id: 'streaming',
+        items: [
+            "Apache Kafka",
+            "Kafka Streams (windowed analytics, state stores)",
+            "Exactly-once semantics (transactional producers)",
+            "Dead-letter & retry topics",
+            "Schema Registry (Avro)",
+            "Prometheus",
+        ],
     },
     {
         id: 'cloud',
